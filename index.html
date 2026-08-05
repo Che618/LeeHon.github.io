@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="陈俐宏的个人主页：大模型推理效率、知识图谱与非遗数字化。">
+    <title>陈俐宏 | LiHong Chen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="回到首页">
+          <span class="brand-mark">LC</span>
+          <span class="brand-copy"><strong>LIHONG CHEN</strong><small>RESEARCH NOTEBOOK</small></span>
+        </a>
+        <button class="nav-toggle icon-btn" type="button" aria-label="打开导航" aria-expanded="false" data-nav-toggle>
+          <i data-lucide="menu"></i>
+        </button>
+        <nav class="site-nav" data-nav>
+          <a href="#research">研究</a>
+          <a href="#project">项目</a>
+          <a href="#highlights">经历</a>
+          <a href="#contact">联系</a>
+          <button class="icon-btn" type="button" data-theme-toggle aria-label="切换主题" title="切换主题">
+            <i data-lucide="sun"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> SOFTWARE ENGINEERING / AI SYSTEMS</p>
+            <h1 id="hero-title">让推理更短，<br><em>让系统更有用。</em></h1>
+            <p class="hero-lede">我是陈俐宏，西南科技大学软件工程（卓越计划班）本科生，正在研究大语言模型的推理预算与系统部署。</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#research">浏览研究 <i data-lucide="arrow-down-right"></i></a>
+              <a class="button button-quiet" href="assets/chen-lihong-resume.pdf" target="_blank" rel="noreferrer">下载简历 <i data-lucide="download"></i></a>
+            </div>
+            <div class="hero-facts" aria-label="个人概况">
+              <div><strong>3 / 231</strong><span>综合排名</span></div>
+              <div><strong>92 / 100</strong><span>PAT 程序设计</span></div>
+              <div><strong>256 h</strong><span>志愿服务</span></div>
+            </div>
+          </div>
+          <div class="hero-portrait reveal" data-delay="120">
+            <div class="portrait-frame">
+              <img src="assets/profile.jpeg" alt="陈俐宏证件照">
+              <span class="portrait-stamp">LIHONG<br>CHEN</span>
+            </div>
+            <p class="portrait-note"><span>01</span> Chengdu / China<br><span>02</span> Curious about efficient intelligence</p>
+          </div>
+        </div>
+        <div class="scroll-cue" aria-hidden="true"><span></span> SCROLL TO EXPLORE</div>
+      </section>
+
+      <section class="intro-band">
+        <div class="container intro-grid reveal">
+          <p class="section-kicker">01 / PROFILE</p>
+          <p class="intro-statement">我喜欢把一个抽象问题，落成一套可以运行、可以验证、也可以被更多人使用的系统。</p>
+          <p class="intro-aside">从推理轨迹的数据处理，到藏纸知识图谱的平台联调，我在算法、工程和真实场景之间来回走动。</p>
+        </div>
+      </section>
+
+      <section class="section" id="research" aria-labelledby="research-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">02 / RESEARCH</p>
+            <h2 id="research-title">研究，不只是把指标做高。</h2>
+            <p>我的关注点是推理过程中的冗余：如何用更少的 token 交付同样可靠，甚至更好的答案。</p>
+          </div>
+
+          <article class="research-feature reveal">
+            <div class="research-feature-copy">
+              <div class="meta-row"><span>2026.05</span><span>NEURIPS 2026</span><span>CCF-A / UNDER REVIEW</span></div>
+              <h3>Logic Density Pruning</h3>
+              <p class="research-subtitle">Mitigating Overthinking via Step-Level Chain of Thought Compression</p>
+              <p>提出逻辑密度剪枝（LDP）框架，结合互信息与注意力机制衡量推理步骤的重要性，再用步级微扰检查保护关键逻辑。</p>
+              <div class="metric-row">
+                <div><strong>80.2%</strong><span>Qwen3-8B Token 减少</span></div>
+                <div><strong>-1.9%</strong><span>准确率变化</span></div>
+                <div><strong>+3.5 pp</strong><span>DeepscaleR 准确率提升</span></div>
+              </div>
+              <p class="role-note"><span>MY ROLE</span> 推理轨迹工程化处理、互信息批量计算、词频分析、消融实验与基线训练。</p>
+            </div>
+            <figure class="research-visual">
+              <img src="assets/ldp-overthinking.png" alt="过度思考与逻辑密度分布研究图">
+              <figcaption>Reasoning logic density distribution / Qwen3-8B</figcaption>
+            </figure>
+          </article>
+
+          <article class="research-row reveal">
+            <div class="research-row-index">02</div>
+            <div>
+              <div class="meta-row"><span>2026.07</span><span>AAAI 2027 / IN SUBMISSION</span><span>SECOND AUTHOR</span></div>
+              <h3>Estimate, Then Think</h3>
+              <p class="research-subtitle">Prompt-Based Token Budgeting for Efficient Inference in Large Reasoning Models</p>
+              <p>基于成功轨迹构建“问题 - 提示预算”软标签，训练无独立 Critic 的预算估计器，并以 Zero-shot / One-shot 提示接口完成系统解耦。</p>
+            </div>
+            <div class="research-result"><strong>46.70%</strong><span>Token 消耗降低</span><small>Qwen3-8B · Accuracy +5.73 pp</small></div>
+          </article>
+
+          <div class="focus-line reveal">
+            <span>FOCUS</span>
+            <span>LLM inference</span><span>data-centric experiments</span><span>SFT / LoRA</span><span>RLOO</span><span>system deployment</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tint" id="project" aria-labelledby="project-title">
+        <div class="container">
+          <div class="section-heading split-heading reveal">
+            <div><p class="section-kicker">03 / PROJECT</p><h2 id="project-title">把文化资料，变成可探索的知识。</h2></div>
+            <p>大学生科技创新基金项目 / 负责人<br>从文献到图谱，再到一个可以被看见的数字平台。</p>
+          </div>
+          <article class="project-feature reveal">
+            <figure class="project-visual"><img src="assets/paper-platform.png" alt="藏纸非遗数字化平台界面截图"><figcaption>藏纸非遗数字化平台 / knowledge graph interface</figcaption></figure>
+            <div class="project-copy">
+              <p class="project-label">纸承雪域</p>
+              <h3>藏纸非遗技艺数字化保护与活态传承</h3>
+              <p>用 Vue3、NestJS 与大模型微服务，建立文化展示、后台管理、知识图谱抽取和互动于一体的平台。非结构化文献被清洗、切分，再转成可交互的标准三元组。</p>
+              <div class="project-points">
+                <div><span>01</span><p>定向采集藏纸网页语料，完成正文提取、噪声清洗与语义切分。</p></div>
+                <div><span>02</span><p>结合 BGE-m3 向量化与 FAISS 检索，召回 few-shot 样本辅助关系归一化。</p></div>
+                <div><span>03</span><p>参与前后端架构、数据库建模、后台管理和图谱页面联调。</p></div>
+              </div>
+              <div class="tag-list"><span>Vue3</span><span>NestJS</span><span>LLM service</span><span>Knowledge graph</span><span>FAISS</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="highlights" aria-labelledby="highlights-title">
+        <div class="container">
+          <div class="section-heading reveal"><p class="section-kicker">04 / HIGHLIGHTS</p><h2 id="highlights-title">在课堂之外，持续把事情做成。</h2></div>
+          <div class="highlight-grid reveal">
+            <div class="highlight-stat"><strong>20+</strong><span>荣誉与表彰</span><p>国家励志奖学金、四川省综合素质 A 证、优秀学生干部等。</p></div>
+            <div class="highlight-stat"><strong>10</strong><span>学生职务</span><p>学习委员、党支部支委、部长、班导生等，连接同学与团队。</p></div>
+            <div class="highlight-stat"><strong>1</strong><span>授权专利</span><p>以工程视角处理问题，也在真实场景里验证技术。</p></div>
+            <div class="highlight-stat"><strong>5</strong><span>社会实践</span><p>在社区、助残基地和校园活动中完成组织与服务。</p></div>
+          </div>
+          <div class="awards-list reveal">
+            <div class="award-item"><span class="award-year">2025</span><div><strong>全球校园人工智能大赛</strong><span>国家级二等奖 / 个人赛</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>全国大学生统计建模大赛</strong><span>国家级三等奖 / 核心成员</span></div></div>
+            <div class="award-item"><span class="award-year">2026</span><div><strong>中国大学生计算机设计大赛</strong><span>省级一等奖 / 核心成员</span></div></div>
+            <div class="award-item"><span class="award-year">2026</span><div><strong>全国大学生市场调查与分析大赛</strong><span>省级二等奖 / 负责人</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="community-band" aria-labelledby="community-title">
+        <div class="container community-grid reveal">
+          <div><p class="section-kicker">05 / PRACTICE</p><h2 id="community-title">把时间交给真实的人。</h2><p>曾任青志实践部外联组部长，连续组织“走进圣水，文明劝导”志愿活动；累计志愿服务 256 小时，影响人数 300+。</p></div>
+          <div class="practice-log"><div><span>2024 - 2025</span><strong>圣水社区文明劝导</strong><small>团队组织 / 社区服务</small></div><div><span>256 h</span><strong>志愿服务累计</strong><small>持续投入 / 真实反馈</small></div><div><span>300+</span><strong>触达人数</strong><small>媒体报道 / 项目影响</small></div></div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-grid reveal">
+          <div><p class="section-kicker">06 / CONTACT</p><h2 id="contact-title">一起把下一个问题做得更好。</h2><p>如果你正在关注高效推理、知识图谱或面向真实场景的 AI 系统，欢迎来信交流。</p></div>
+          <div class="contact-actions"><a class="contact-link" href="mailto:leechen@mails.swust.edu.cn"><span>leechen@mails.swust.edu.cn</span><i data-lucide="arrow-up-right"></i></a><a class="contact-link" href="assets/chen-lihong-resume.pdf" target="_blank" rel="noreferrer"><span>查看完整简历 PDF</span><i data-lucide="file-text"></i></a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="container"><span>© <span data-year></span> LiHong Chen</span><span>Built with curiosity and care.</span><a href="#top" aria-label="回到顶部"><i data-lucide="arrow-up"></i></a></div></footer>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
