@@ -74,7 +74,7 @@
           <div class="section-heading reveal">
             <p class="section-kicker">02 / RESEARCH</p>
             <h2 id="research-title">研究，不只是把指标做高。</h2>
-            <p>我的关注点是推理过程中的冗余：如何用更少的 token 交付同样可靠，甚至更好的答案。</p>
+            <p>我的关注点是推理过程中的冗余：如何用更少的 token 交付同样可靠，甚至更好的答案。研究工作覆盖数据构建、指标设计、模型训练、实验分析与系统接口。</p>
           </div>
 
           <article class="research-feature reveal">
@@ -82,13 +82,13 @@
               <div class="meta-row"><span>2026.05</span><span>NEURIPS 2026</span><span>CCF-A / UNDER REVIEW</span></div>
               <h3>Logic Density Pruning</h3>
               <p class="research-subtitle">Mitigating Overthinking via Step-Level Chain of Thought Compression</p>
-              <p>提出逻辑密度剪枝（LDP）框架，结合互信息与注意力机制衡量推理步骤的重要性，再用步级微扰检查保护关键逻辑。</p>
+              <p>针对大语言模型在复杂问题上反复验证、消耗大量无效推理 token 的现象，提出逻辑密度剪枝（LDP）框架。方法结合互信息（MI）与注意力引用分数衡量步骤重要性，再用步级微扰检查（SPC）保护关键逻辑，最后通过 SFT/LoRA 训练压缩后的推理轨迹。</p>
               <div class="metric-row">
                 <div><strong>80.2%</strong><span>Qwen3-8B Token 减少</span></div>
                 <div><strong>-1.9%</strong><span>准确率变化</span></div>
                 <div><strong>+3.5 pp</strong><span>DeepscaleR 准确率提升</span></div>
               </div>
-              <p class="role-note"><span>MY ROLE</span> 推理轨迹工程化处理、互信息批量计算、词频分析、消融实验与基线训练。</p>
+              <p class="role-note"><span>MY ROLE</span> 在远程服务器中完成 Qwen3 与 DeepscaleR 多分支思维链生成、提取和清洗；使用 Python 批量计算基于希尔伯特-施密特独立性准则的互信息得分，统计“犹豫标记”与“结论标记”的词频分布；主导单一 MI、单一注意力指标的消融实验，并完成 TokenSkip、SBT 等基线的对比训练。</p>
             </div>
             <figure class="research-visual">
               <img src="assets/ldp-overthinking.png" alt="过度思考与逻辑密度分布研究图">
@@ -102,14 +102,27 @@
               <div class="meta-row"><span>2026.07</span><span>AAAI 2027 / IN SUBMISSION</span><span>SECOND AUTHOR</span></div>
               <h3>Estimate, Then Think</h3>
               <p class="research-subtitle">Prompt-Based Token Budgeting for Efficient Inference in Large Reasoning Models</p>
-              <p>基于成功轨迹构建“问题 - 提示预算”软标签，训练无独立 Critic 的预算估计器，并以 Zero-shot / One-shot 提示接口完成系统解耦。</p>
+              <p>针对大语言模型“想得更多却不一定答得更好”的预算失配，基于 LRM 成功轨迹构建“问题 - 提示预算”软标签：对 competition_math 多难度采样，以 0.5 至 0.1 的缩减系数寻找保持正确行为的预算下界。随后基于 Qwen3-8B 用组相对策略优化训练预算估计器，设计重罚低预算、抑制过大预算的符号奖励函数，并以 Zero-shot / One-shot 提示接口完成预算选择与目标模型推理解耦。</p>
+              <p class="role-note"><span>MY ROLE</span> 负责训练集构建、基准标定、奖励函数设计、预算估计器训练和提示接口设计。</p>
             </div>
             <div class="research-result"><strong>46.70%</strong><span>Token 消耗降低</span><small>Qwen3-8B · Accuracy +5.73 pp</small></div>
           </article>
 
+          <article class="research-row reveal">
+            <div class="research-row-index">03</div>
+            <div>
+              <div class="meta-row"><span>2025.09</span><span>社会经济导刊</span><span>SECOND AUTHOR</span></div>
+              <h3>生育支持政策下青年婚育观研究</h3>
+              <p class="research-subtitle">从问卷数据到婚育意愿的结构模型与群体异质性</p>
+              <p>围绕家庭环境、婚育教育与婚育认知对青年婚育意愿的影响，设计多阶段分层抽样方案，完成问卷特征清洗、描述性可视化和核心实证模型构建；进一步使用结构方程模型完成路径估计与验证性因子分析，再以聚类算法划分三类特征群体，为异质性解释提供依据。</p>
+              <p class="role-note"><span>MY ROLE</span> 数据处理、核心实证模型构建、抽样方案设计、可视化分析与异质性聚类。</p>
+            </div>
+            <div class="research-result"><strong>3 类</strong><span>青年特征群体</span><small>SEM · CFA · clustering</small></div>
+          </article>
+
           <div class="focus-line reveal">
             <span>FOCUS</span>
-            <span>LLM inference</span><span>data-centric experiments</span><span>SFT / LoRA</span><span>RLOO</span><span>system deployment</span>
+            <span>LLM inference</span><span>mutual information</span><span>prompt budgeting</span><span>SFT / LoRA</span><span>SEM / CFA</span><span>system deployment</span>
           </div>
         </div>
       </section>

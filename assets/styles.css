@@ -101,6 +101,7 @@ figcaption { margin-top: 9px; color: var(--ink-soft); font: 10px var(--mono); le
 .research-row-index { font: 500 18px var(--mono); color: var(--coral); }
 .research-row h3 { font-size: 28px; }
 .research-row p:not(.research-subtitle) { max-width: 660px; margin-bottom: 0; color: var(--ink-soft); font-size: 14px; }
+.research-row .role-note { margin-top: 18px; }
 .research-result { align-self: end; padding-left: 20px; border-left: 1px solid var(--line); }
 .research-result strong { display: block; color: var(--teal); font-size: 29px; line-height: 1.1; }
 .research-result span { display: block; margin-top: 5px; font-size: 12px; }
