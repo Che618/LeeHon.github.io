@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="陈俐宏的个人主页：大模型推理效率、知识图谱与非遗数字化。">
     <title>陈俐宏 | LiHong Chen</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles.css">
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
@@ -36,26 +33,33 @@
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="container hero-grid">
-          <div class="hero-copy reveal">
-            <p class="eyebrow"><span class="eyebrow-dot"></span> SOFTWARE ENGINEERING / AI SYSTEMS</p>
-            <h1 id="hero-title">让推理更短，<br><em>让系统更有用。</em></h1>
-            <p class="hero-lede">我是陈俐宏，西南科技大学软件工程（卓越计划班）本科生，正在研究大语言模型的推理预算与系统部署。</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#research">浏览研究 <i data-lucide="arrow-down-right"></i></a>
-              <a class="button button-quiet" href="assets/chen-lihong-resume.pdf" target="_blank" rel="noreferrer">下载简历 <i data-lucide="download"></i></a>
-            </div>
-            <div class="hero-facts" aria-label="个人概况">
-              <div><strong>3 / 231</strong><span>综合排名</span></div>
-              <div><strong>92 / 100</strong><span>PAT 程序设计</span></div>
-              <div><strong>256 h</strong><span>志愿服务</span></div>
-            </div>
-          </div>
-          <div class="hero-portrait reveal" data-delay="120">
+          <aside class="hero-profile reveal" aria-label="基础信息">
             <div class="portrait-frame">
               <img src="assets/profile.jpeg" alt="陈俐宏证件照">
               <span class="portrait-stamp">LIHONG<br>CHEN</span>
             </div>
-            <p class="portrait-note"><span>01</span> Chengdu / China<br><span>02</span> Curious about efficient intelligence</p>
+            <div class="profile-identity">
+              <h2>陈俐宏</h2>
+              <p>LiHong Chen · 2023 级本科生</p>
+            </div>
+            <dl class="profile-details">
+              <div><dt>学校</dt><dd>西南科技大学<br>计算机科学与技术学院</dd></div>
+              <div><dt>专业</dt><dd>软件工程（卓越计划班）</dd></div>
+              <div><dt>基本</dt><dd>女 · 2004.12.04<br>四川达州 · 中共党员</dd></div>
+              <div><dt>联系</dt><dd>178-8396-2853<br>leechen@mails.swust.edu.cn</dd></div>
+            </dl>
+          </aside>
+          <div class="hero-copy reveal" data-delay="120">
+            <p class="eyebrow"><span class="eyebrow-dot"></span> SOFTWARE ENGINEERING / AI SYSTEMS</p>
+            <h1 id="hero-title">让推理更短，<br><em>让系统更有用。</em></h1>
+            <p class="hero-lede">我关注大语言模型的推理预算、程序分析与系统部署，习惯把一个抽象问题落成可运行、可验证、可交付的系统。</p>
+            <div class="hero-resume-grid" aria-label="履历摘要">
+              <div><span>教育背景</span><strong>综合排名 3 / 231</strong><small>绩点排名 15 / 231 · GPA 3.8 · CET4 / CET6</small></div>
+              <div><span>专业能力</span><strong>PAT 92 / 100</strong><small>科学计算导论 100 · 数据结构 98 · 机器学习实践 98.3 · 计算机网络 95</small></div>
+              <div><span>研究主线</span><strong>LLM 高效推理</strong><small>预算估计 · 思维链压缩 · 系统部署</small></div>
+              <div><span>综合发展</span><strong>20+ 荣誉 · 10 项职务</strong><small>256 小时志愿服务 · 1 项授权专利</small></div>
+            </div>
+            <div class="hero-actions"><a class="button button-primary" href="#research">浏览研究 <i data-lucide="arrow-down-right"></i></a></div>
           </div>
         </div>
         <div class="scroll-cue" aria-hidden="true"><span></span> SCROLL TO EXPLORE</div>
@@ -82,13 +86,13 @@
               <div class="meta-row"><span>2026.05</span><span>NEURIPS 2026</span><span>CCF-A / UNDER REVIEW</span></div>
               <h3>Logic Density Pruning</h3>
               <p class="research-subtitle">Mitigating Overthinking via Step-Level Chain of Thought Compression</p>
-              <p>针对大语言模型在复杂问题上反复验证、消耗大量无效推理 token 的现象，提出逻辑密度剪枝（LDP）框架。方法结合互信息（MI）与注意力引用分数衡量步骤重要性，再用步级微扰检查（SPC）保护关键逻辑，最后通过 SFT/LoRA 训练压缩后的推理轨迹。</p>
+              <p>针对大语言模型在复杂问题上反复验证、消耗大量无效推理 token 的现象，提出逻辑密度剪枝（LDP）框架。方法结合互信息（MI）与注意力引用分数衡量步骤重要性，再用步级微扰检查（SPC）保护关键逻辑，最后通过 SFT/LoRA 训练压缩后的推理轨迹。研究同时回应两类痛点：模型缺乏难度感知，且生成阶段缺少可控的外部干预。</p>
               <div class="metric-row">
                 <div><strong>80.2%</strong><span>Qwen3-8B Token 减少</span></div>
                 <div><strong>-1.9%</strong><span>准确率变化</span></div>
                 <div><strong>+3.5 pp</strong><span>DeepscaleR 准确率提升</span></div>
               </div>
-              <p class="role-note"><span>MY ROLE</span> 在远程服务器中完成 Qwen3 与 DeepscaleR 多分支思维链生成、提取和清洗；使用 Python 批量计算基于希尔伯特-施密特独立性准则的互信息得分，统计“犹豫标记”与“结论标记”的词频分布；主导单一 MI、单一注意力指标的消融实验，并完成 TokenSkip、SBT 等基线的对比训练。</p>
+              <p class="role-note"><span>MY ROLE</span> 在远程服务器中完成 Qwen3 与 DeepscaleR 多分支思维链生成、提取和清洗；使用 Python 批量计算基于希尔伯特-施密特独立性准则的互信息得分，统计“犹豫标记”与“结论标记”的词频分布；主导单一 MI、单一注意力指标的消融实验，并完成 TokenSkip、SBT 等基线的对比训练。DeepscaleR-1.5B 的 Token 消耗降低 49.2%，准确率由 40.8% 提升至 44.3%。</p>
             </div>
             <figure class="research-visual">
               <img src="assets/ldp-overthinking.png" alt="过度思考与逻辑密度分布研究图">
@@ -102,10 +106,10 @@
               <div class="meta-row"><span>2026.07</span><span>AAAI 2027 / IN SUBMISSION</span><span>SECOND AUTHOR</span></div>
               <h3>Estimate, Then Think</h3>
               <p class="research-subtitle">Prompt-Based Token Budgeting for Efficient Inference in Large Reasoning Models</p>
-              <p>针对大语言模型“想得更多却不一定答得更好”的预算失配，基于 LRM 成功轨迹构建“问题 - 提示预算”软标签：对 competition_math 多难度采样，以 0.5 至 0.1 的缩减系数寻找保持正确行为的预算下界。随后基于 Qwen3-8B 用组相对策略优化训练预算估计器，设计重罚低预算、抑制过大预算的符号奖励函数，并以 Zero-shot / One-shot 提示接口完成预算选择与目标模型推理解耦。</p>
+              <p>针对大语言模型“想得更多却不一定答得更好”的预算失配，在 MATH500 等 2,022 道多难度问题上评估三个 LRM，提出 ETT 自适应提示预算策略：从成功轨迹构建“问题 - 提示预算”软标签，以 0.5 至 0.1 的缩减系数寻找预算下界；随后基于 Qwen3-8B 用 GRPO 训练仅输出整数预算的估计器，并以 Zero-shot / One-shot / Forced 三种提示接口完成预算选择与目标模型推理解耦。</p>
               <p class="role-note"><span>MY ROLE</span> 负责训练集构建、基准标定、奖励函数设计、预算估计器训练和提示接口设计。</p>
             </div>
-            <div class="research-result"><strong>46.70%</strong><span>Token 消耗降低</span><small>Qwen3-8B · Accuracy +5.73 pp</small></div>
+            <div class="research-result"><strong>46.70%</strong><span>Token 消耗降低</span><small>ETT-O：90.27% Acc · 1,283.5 tokens · 节省 37.39%<br>Qwen3-8B：Accuracy +5.73 pp · Pass@3 +4.11 pp<br>GSM8K 节省 43.09% · MATH500 +8.87 pp</small></div>
           </article>
 
           <article class="research-row reveal">
@@ -131,7 +135,7 @@
         <div class="container">
           <div class="section-heading split-heading reveal">
             <div><p class="section-kicker">03 / PROJECT</p><h2 id="project-title">把文化资料，变成可探索的知识。</h2></div>
-            <p>大学生科技创新基金项目 / 负责人<br>从文献到图谱，再到一个可以被看见的数字平台。</p>
+            <p>国创赛子项目 / 大学生科技创新基金项目 / 负责人<br>从文献到图谱，再到一个可以被看见的数字平台。</p>
           </div>
           <article class="project-feature reveal">
             <figure class="project-visual"><img src="assets/paper-platform.png" alt="藏纸非遗数字化平台界面截图"><figcaption>藏纸非遗数字化平台 / knowledge graph interface</figcaption></figure>
@@ -143,9 +147,23 @@
                 <div><span>01</span><p>定向采集藏纸网页语料，完成正文提取、噪声清洗与语义切分。</p></div>
                 <div><span>02</span><p>结合 BGE-m3 向量化与 FAISS 检索，召回 few-shot 样本辅助关系归一化。</p></div>
                 <div><span>03</span><p>参与前后端架构、数据库建模、后台管理和图谱页面联调。</p></div>
+                <div><span>04</span><p>平台已整理 23 种藏纸类型、12 项工艺流程和 2 种在售文创，系统已上线并持续开发。</p></div>
               </div>
-              <div class="tag-list"><span>Vue3</span><span>NestJS</span><span>LLM service</span><span>Knowledge graph</span><span>FAISS</span></div>
+              <div class="tag-list"><span>Vue3</span><span>NestJS</span><span>LLM service</span><span>Knowledge graph</span><span>FAISS</span><a href="http://39.106.33.244:8082" target="_blank" rel="noreferrer">公众门户</a><a href="http://39.106.33.244:8081" target="_blank" rel="noreferrer">管理后台</a></div>
             </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section health-project" aria-labelledby="health-title">
+        <div class="container">
+          <div class="section-heading split-heading reveal">
+            <div><p class="section-kicker">04 / ENGINEERING PROJECT</p><h2 id="health-title">慢病智策：让体检数据更可解释。</h2></div>
+            <p>项目组长<br>从预测模型到决策路径，再到可交互的健康问答。</p>
+          </div>
+          <article class="health-feature reveal">
+            <div class="health-intro"><p>面向体检数据的慢性病智能分析平台，集多病种风险预测、决策路径解释、风险可视化和 AI 健康问答于一体。</p><div class="health-stats"><div><strong>4</strong><span>风险预测模型</span></div><div><strong>3</strong><span>聚类与解释视图</span></div><div><strong>1</strong><span>大模型问答入口</span></div></div></div>
+            <div class="health-points"><div><span>01</span><p>负责四种风险预测模型训练与优化，完成疾病数据特征处理和聚类分析。</p></div><div><span>02</span><p>接入遵循 OpenAI 协议的大模型问答接口，实现体检指标解释、风险解读和健康咨询。</p></div><div><span>03</span><p>技术栈涵盖 Flask-CORS、FastAPI、NumPy、Pandas、XGBoost、随机森林、K-means、PCA、t-SNE、Vue 3、Vite、ECharts、marked、dompurify 与原生 fetch API。</p></div></div>
           </article>
         </div>
       </section>
@@ -154,7 +172,7 @@
         <div class="container">
           <div class="section-heading reveal"><p class="section-kicker">04 / HIGHLIGHTS</p><h2 id="highlights-title">在课堂之外，持续把事情做成。</h2></div>
           <div class="highlight-grid reveal">
-            <div class="highlight-stat"><strong>20+</strong><span>荣誉与表彰</span><p>国家励志奖学金、四川省综合素质 A 证、优秀学生干部等。</p></div>
+            <div class="highlight-stat"><strong>20+</strong><span>荣誉与表彰</span><p>2 次国家励志奖学金、11 次校院级奖学金、3.3w+ 奖助学金及四川省综合素质 A 证等。</p></div>
             <div class="highlight-stat"><strong>10</strong><span>学生职务</span><p>学习委员、党支部支委、部长、班导生等，连接同学与团队。</p></div>
             <div class="highlight-stat"><strong>1</strong><span>授权专利</span><p>以工程视角处理问题，也在真实场景里验证技术。</p></div>
             <div class="highlight-stat"><strong>5</strong><span>社会实践</span><p>在社区、助残基地和校园活动中完成组织与服务。</p></div>
@@ -164,21 +182,31 @@
             <div class="award-item"><span class="award-year">2025</span><div><strong>全国大学生统计建模大赛</strong><span>国家级三等奖 / 核心成员</span></div></div>
             <div class="award-item"><span class="award-year">2026</span><div><strong>中国大学生计算机设计大赛</strong><span>省级一等奖 / 核心成员</span></div></div>
             <div class="award-item"><span class="award-year">2026</span><div><strong>全国大学生市场调查与分析大赛</strong><span>省级二等奖 / 负责人</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>CCF 算法能力大赛</strong><span>省级三等奖 / 个人赛</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>睿抗机器人开发者大赛（RAICOM）</strong><span>省级三等奖 / 个人赛</span></div></div>
+            <div class="award-item"><span class="award-year">2024-26</span><div><strong>校院级竞赛与实践</strong><span>国家级 2 项、省级 8 项、校级 30 余项</span></div></div>
           </div>
         </div>
       </section>
 
       <section class="community-band" aria-labelledby="community-title">
         <div class="container community-grid reveal">
-          <div><p class="section-kicker">05 / PRACTICE</p><h2 id="community-title">把时间交给真实的人。</h2><p>曾任青志实践部外联组部长，连续组织“走进圣水，文明劝导”志愿活动；累计志愿服务 256 小时，影响人数 300+。</p></div>
-          <div class="practice-log"><div><span>2024 - 2025</span><strong>圣水社区文明劝导</strong><small>团队组织 / 社区服务</small></div><div><span>256 h</span><strong>志愿服务累计</strong><small>持续投入 / 真实反馈</small></div><div><span>300+</span><strong>触达人数</strong><small>媒体报道 / 项目影响</small></div></div>
+          <div><p class="section-kicker">05 / PRACTICE</p><h2 id="community-title">把时间交给真实的人。</h2><p>曾任青志实践部外联组部长，连续组织“走进圣水，文明劝导”志愿活动；累计志愿服务 256 小时，影响人数 300+。参与校园公益、非遗守护、交通文明劝导、演讲比赛、毕业晚会独奏与团体合唱。</p></div>
+          <div class="practice-log"><div><span>2024 - 25</span><strong>圣水社区文明劝导</strong><small>团队组织 / 社区服务</small></div><div><span>256 h</span><strong>志愿服务累计</strong><small>50 余次活动 / 300+ 人触达</small></div><div><span>2024 - 25</span><strong>社会实践与美育</strong><small>暑假一等奖、寒假三等奖、“母校行”奖项、主唱团</small></div><div><span>2025.07</span><strong>资助宣传大使</strong><small>获媒体单独报道，荣获多项志愿奖项</small></div><div><span>习惯</span><strong>严谨记录，善于协作</strong><small>语雀沉淀近 50 万字实验记录，熟练使用 Git；抗压能力强</small></div></div>
+        </div>
+      </section>
+
+      <section class="section future-section" aria-labelledby="future-title">
+        <div class="container">
+          <div class="section-heading reveal"><p class="section-kicker">06 / FUTURE PLAN</p><h2 id="future-title">面向软件安全的智能程序分析。</h2><p>围绕大语言模型增强的程序推理与安全分析，逐步完成课题与就业衔接，提升程序分析与安全攻防的研发和工程落地能力。</p></div>
+          <div class="future-grid reveal"><article><span>01 / 研一</span><h3>补齐理论，建立科研方法</h3><p>系统学习软件安全、机器学习与深度学习；阅读中英文文献，熟悉课题组方向和实验流程，完成基础实验与数据整理。</p></article><article><span>02 / 研二</span><h3>聚焦 LLM + 安全分析</h3><p>深入隐私检测、漏洞挖掘与代码溯源，推进论文实验、模型优化和项目协作，争取论文、专利或竞赛成果。</p></article><article><span>03 / 研三</span><h3>整合积累，完成就业衔接</h3><p>梳理论文主线与个人技术栈，完成毕业论文、项目复盘和成果整理，面向 AI 算法、计算机视觉或智能制造岗位。</p></article></div>
         </div>
       </section>
 
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div class="container contact-grid reveal">
-          <div><p class="section-kicker">06 / CONTACT</p><h2 id="contact-title">一起把下一个问题做得更好。</h2><p>如果你正在关注高效推理、知识图谱或面向真实场景的 AI 系统，欢迎来信交流。</p></div>
-          <div class="contact-actions"><a class="contact-link" href="mailto:leechen@mails.swust.edu.cn"><span>leechen@mails.swust.edu.cn</span><i data-lucide="arrow-up-right"></i></a><a class="contact-link" href="assets/chen-lihong-resume.pdf" target="_blank" rel="noreferrer"><span>查看完整简历 PDF</span><i data-lucide="file-text"></i></a></div>
+          <div><p class="section-kicker">07 / CONTACT</p><h2 id="contact-title">一起把下一个问题做得更好。</h2><p>如果你正在关注高效推理、知识图谱或面向真实场景的 AI 系统，欢迎来信交流。</p></div>
+          <div class="contact-actions"><a class="contact-link" href="mailto:leechen@mails.swust.edu.cn"><span>leechen@mails.swust.edu.cn</span><i data-lucide="arrow-up-right"></i></a><a class="contact-link" href="tel:17883962853"><span>178-8396-2853</span><i data-lucide="phone"></i></a></div>
         </div>
       </section>
     </main>
