@@ -521,3 +521,29 @@ body { font-size: 17px; }
 .certificate-showcase,
 .future-grid,
 .contact-grid { margin-inline: auto; }
+
+/* Compact the reading rhythm across the full page without reducing content density. */
+.section { padding: clamp(58px, 5.5vw, 78px) 0; }
+#research.section { padding-top: clamp(56px, 5vw, 72px); padding-bottom: clamp(54px, 5vw, 72px); }
+.intro-band { padding: 54px 0 58px; }
+.section-heading { margin-bottom: 30px; }
+.research-feature { gap: 38px; padding-bottom: 42px; }
+#research .research-row { padding: 27px 0; }
+.focus-line { padding-top: 20px; }
+.project-feature { gap: 46px; }
+.health-feature { gap: 32px; }
+.certificate-showcase { margin-top: 48px; }
+.certificate-heading-secondary { margin-top: 38px; }
+.community-band { padding: clamp(58px, 5.5vw, 74px) 0; }
+.community-heading { margin-bottom: 30px; }
+.practice-photo-carousel { margin-bottom: 34px; }
+.contact-section { padding: clamp(58px, 5.5vw, 74px) 0 clamp(52px, 4.5vw, 66px); }
+
+@media (max-width: 680px) {
+  .section { padding: 62px 0; }
+  .intro-band { padding: 50px 0; }
+  .section-heading { margin-bottom: 28px; }
+  .certificate-showcase { margin-top: 40px; }
+  .community-band { padding: 62px 0; }
+  .contact-section { padding: 62px 0 54px; }
+}
