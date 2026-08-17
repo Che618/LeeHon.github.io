@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="陈俐宏的个人主页：大模型推理效率、知识图谱与非遗数字化。">
-    <title>陈俐宏 | LiHong Chen</title>
+    <title>陈俐宏 | 个人主页</title>
     <link rel="stylesheet" href="assets/styles.css">
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
@@ -13,16 +13,17 @@
       <div class="container nav-wrap">
         <a class="brand" href="#top" aria-label="回到首页">
           <span class="brand-mark">LC</span>
-          <span class="brand-copy"><strong>LIHONG CHEN</strong><small>RESEARCH NOTEBOOK</small></span>
+          <span class="brand-copy"><strong>陈俐宏</strong><small>个人主页</small></span>
         </a>
         <button class="nav-toggle icon-btn" type="button" aria-label="打开导航" aria-expanded="false" data-nav-toggle>
           <i data-lucide="menu"></i>
         </button>
         <nav class="site-nav" data-nav>
-          <a href="#research">研究</a>
-          <a href="#project">项目</a>
-          <a href="#highlights">经历</a>
-          <a href="#contact">联系</a>
+          <a href="#about">关于我</a>
+          <a href="#research">研究成果</a>
+          <a href="#project">项目经历</a>
+          <a href="#highlights">荣誉奖项</a>
+          <a href="#contact">联系方式</a>
           <button class="icon-btn" type="button" data-theme-toggle aria-label="切换主题" title="切换主题">
             <i data-lucide="sun"></i>
           </button>
@@ -32,96 +33,110 @@
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
-        <div class="container hero-grid">
-          <aside class="hero-profile reveal" aria-label="基础信息">
-            <div class="portrait-frame">
-              <img src="assets/profile.jpeg" alt="陈俐宏证件照">
-              <span class="portrait-stamp">LIHONG<br>CHEN</span>
+        <div class="hero-card reveal">
+          <div class="hero-avatar"><img src="assets/profile.jpeg" alt="陈俐宏证件照"></div>
+          <div class="hero-copy">
+            <p class="hero-role">软件工程 · 人工智能系统</p>
+            <h1 id="hero-title">陈俐宏</h1>
+            <p class="hero-school">西南科技大学计算机科学与技术学院</p>
+            <p class="hero-lede">软件工程（卓越计划班）2023 级本科生，关注大语言模型高效推理、程序分析与系统部署。</p>
+            <div class="hero-actions" aria-label="联系与资料">
+              <a class="hero-contact" href="mailto:leechen@mails.swust.edu.cn" aria-label="发送邮件" title="发送邮件"><i data-lucide="mail"></i></a>
+              <a class="hero-contact" href="tel:17883962853" aria-label="拨打电话" title="拨打电话"><i data-lucide="phone"></i></a>
+              <a class="hero-contact" href="assets/chen-lihong-resume.pdf" target="_blank" rel="noreferrer" aria-label="查看简历" title="查看简历"><i data-lucide="file-text"></i></a>
+              <a class="hero-link" href="#research">查看研究成果 <i data-lucide="arrow-down"></i></a>
             </div>
-            <div class="profile-identity">
-              <h2>陈俐宏</h2>
-              <p>LiHong Chen · 2023 级本科生</p>
-            </div>
-            <dl class="profile-details">
-              <div><dt>学校</dt><dd>西南科技大学<br>计算机科学与技术学院</dd></div>
-              <div><dt>专业</dt><dd>软件工程（卓越计划班）</dd></div>
-              <div><dt>基本</dt><dd>女 · 2004.12.04<br>四川达州 · 中共党员</dd></div>
-              <div><dt>联系</dt><dd>178-8396-2853<br>leechen@mails.swust.edu.cn</dd></div>
-            </dl>
-          </aside>
-          <div class="hero-copy reveal" data-delay="120">
-            <p class="eyebrow"><span class="eyebrow-dot"></span> SOFTWARE ENGINEERING / AI SYSTEMS</p>
-            <h1 id="hero-title">让推理更短，<br><em>让系统更有用。</em></h1>
-            <p class="hero-lede">我关注大语言模型的推理预算、程序分析与系统部署，习惯把一个抽象问题落成可运行、可验证、可交付的系统。</p>
-            <div class="hero-resume-grid" aria-label="履历摘要">
-              <div><span>教育背景</span><strong>综合排名 3 / 231</strong><small>绩点排名 15 / 231 · GPA 3.8 · CET4 / CET6</small></div>
-              <div><span>专业能力</span><strong>PAT 92 / 100</strong><small>科学计算导论 100 · 数据结构 98 · 机器学习实践 98.3 · 计算机网络 95</small></div>
-              <div><span>研究主线</span><strong>LLM 高效推理</strong><small>预算估计 · 思维链压缩 · 系统部署</small></div>
-              <div><span>综合发展</span><strong>20+ 荣誉 · 10 项职务</strong><small>256 小时志愿服务 · 1 项授权专利</small></div>
-            </div>
-            <div class="hero-actions"><a class="button button-primary" href="#research">浏览研究 <i data-lucide="arrow-down-right"></i></a></div>
           </div>
         </div>
-        <div class="scroll-cue" aria-hidden="true"><span></span> SCROLL TO EXPLORE</div>
       </section>
 
-      <section class="intro-band">
+      <section class="intro-band" id="about">
         <div class="container intro-grid reveal">
-          <p class="section-kicker">01 / PROFILE</p>
-          <p class="intro-statement">我喜欢把一个抽象问题，落成一套可以运行、可以验证、也可以被更多人使用的系统。</p>
-          <p class="intro-aside">从推理轨迹的数据处理，到藏纸知识图谱的平台联调，我在算法、工程和真实场景之间来回走动。</p>
+          <div class="about-main"><h2><i data-lucide="contact-round"></i> 个人简介</h2><p>陈俐宏，西南科技大学计算机科学与技术学院软件工程（卓越计划班）2023 级本科生。专业综合排名 3 / 231，绩点排名 15 / 231，GPA 3.8；通过 PAT 考试并取得 92 分。本科阶段始终将基础能力训练放在首位，重视把课程学习转化为可以迁移的问题分析与工程实现能力。</p><p>我系统学习数据结构、算法设计、操作系统、数据库、计算机网络、机器学习和深度学习等课程。在学习中习惯先拆分问题，再从教材、论文和代码实现中逐层验证理解；面对不熟悉的内容，会通过查阅资料、对照实验和反复推敲建立可靠认知。这一过程培养了自主学习、逻辑分析和持续复盘的习惯，也支持我阅读英文文献并跟进相关研究进展。</p><p>科研方面，我参与大语言模型高效推理与思维链压缩研究，围绕推理过程中的 token 冗余、预算引导和模型行为解释开展数据处理、互信息分析、提示设计、实验跑通与消融验证；在非物质文化遗产知识图谱项目中，参与 LLM 微服务搭建、前后端联调、BGE-m3 与 FAISS 检索流程设计及图谱可视化开发。两类经历使我既关注研究方法的可解释性与可复现性，也关注系统能否真正服务具体场景。</p><p>除学习和科研外，我也持续参与学生工作与社会实践，曾承担新生适应支持、团支部活动组织、学风建设和学院事务协助等工作。与同学和团队协作的经历让我更加重视责任意识、主动沟通与执行细节。未来希望在研究生阶段继续围绕大语言模型高效推理、自然语言处理、检索增强、推荐系统与知识表示深入学习，逐步成长为能够独立思考、严谨验证并解决实际问题的研究者。</p></div>
+          <div class="about-columns"><div><h3><i data-lucide="sparkles"></i> 研究兴趣</h3><ul><li><strong>大语言模型高效推理</strong><span>推理预算估计、思维链压缩、模型行为分析</span></li><li><strong>自然语言处理与知识表示</strong><span>信息抽取、检索增强、知识图谱构建</span></li><li><strong>智能系统与推荐方法</strong><span>数据建模、个性化决策与系统部署</span></li></ul></div><div><h3><i data-lucide="graduation-cap"></i> 学术基础</h3><ul><li><strong>西南科技大学</strong><span>计算机科学与技术学院</span><span>软件工程（卓越计划班）· 2023 级至今</span></li><li><strong>课程与能力</strong><span>数据结构 98 · 机器学习实践 98.3</span><span>PAT 92 / 100 · 具备英文文献阅读能力</span></li></ul></div></div>
         </div>
       </section>
 
       <section class="section" id="research" aria-labelledby="research-title">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-kicker">02 / RESEARCH</p>
-            <h2 id="research-title">研究，不只是把指标做高。</h2>
-            <p>我的关注点是推理过程中的冗余：如何用更少的 token 交付同样可靠，甚至更好的答案。研究工作覆盖数据构建、指标设计、模型训练、实验分析与系统接口。</p>
+            <p class="section-kicker">01 / 研究成果</p>
+            <h2 id="research-title">研究经历与学术成果</h2>
+            <p>围绕大语言模型高效推理、知识图谱与数据建模开展科研训练，覆盖数据构建、指标设计、模型训练、实验分析与系统实现。</p>
           </div>
 
-          <article class="research-feature reveal">
+          <article class="research-feature research-feature--stacked reveal">
             <div class="research-feature-copy">
-              <div class="meta-row"><span>2026.05</span><span>NEURIPS 2026</span><span>CCF-A / UNDER REVIEW</span></div>
-              <h3>Logic Density Pruning</h3>
-              <p class="research-subtitle">Mitigating Overthinking via Step-Level Chain of Thought Compression</p>
-              <p>针对大语言模型在复杂问题上反复验证、消耗大量无效推理 token 的现象，提出逻辑密度剪枝（LDP）框架。方法结合互信息（MI）与注意力引用分数衡量步骤重要性，再用步级微扰检查（SPC）保护关键逻辑，最后通过 SFT/LoRA 训练压缩后的推理轨迹。研究同时回应两类痛点：模型缺乏难度感知，且生成阶段缺少可控的外部干预。</p>
+              <div class="meta-row"><span>2026.05</span><span>NeurIPS 2026 投稿</span><span>第一轮评审完成：4 / 4 / 3</span><span>第三作者</span></div>
+              <h3 class="research-full-title">Logic Density Pruning: Mitigating Overthinking via Step-Level Chain of Thought Compression</h3>
+              <p>大语言推理模型在复杂任务中往往通过生成更长的思维链来提升表现，但冗余复述、松散解释和无效分支也会显著推高 token 消耗与推理延迟。针对这一“过度思考”现象，本文提出逻辑密度剪枝（LDP）框架，以互信息（MI）和注意力引用两类信号联合衡量推理步骤对最终答案的贡献，得到可解释的步骤重要性指标。</p>
+              <p>在剪枝阶段，LDP 使用 Otsu 自适应阈值完成样本内筛选，并通过步级微扰检查验证删除候选步骤是否会显著改变后续生成分布，对关键步骤进行选择性恢复；压缩后的思维链进一步作为监督数据用于微调，形成从剪枝、数据构建到训练的完整流程。在 CommonsenseQA 上应用于 Qwen3-8B 时，推理 token 从 295.5 降至 58.6，减少 80.2%，性能仅下降 1.9%。</p>
               <div class="metric-row">
                 <div><strong>80.2%</strong><span>Qwen3-8B Token 减少</span></div>
                 <div><strong>-1.9%</strong><span>准确率变化</span></div>
                 <div><strong>+3.5 pp</strong><span>DeepscaleR 准确率提升</span></div>
               </div>
-              <p class="role-note"><span>MY ROLE</span> 在远程服务器中完成 Qwen3 与 DeepscaleR 多分支思维链生成、提取和清洗；使用 Python 批量计算基于希尔伯特-施密特独立性准则的互信息得分，统计“犹豫标记”与“结论标记”的词频分布；主导单一 MI、单一注意力指标的消融实验，并完成 TokenSkip、SBT 等基线的对比训练。DeepscaleR-1.5B 的 Token 消耗降低 49.2%，准确率由 40.8% 提升至 44.3%。</p>
+              <p class="role-note"><span>我的贡献</span> 在远程服务器中完成 Qwen3 与 DeepscaleR 多分支思维链生成、提取和清洗；使用 Python 批量计算基于希尔伯特-施密特独立性准则的互信息得分，统计“犹豫标记”与“结论标记”的词频分布；主导单一 MI、单一注意力指标的消融实验，并完成 TokenSkip、SBT 等基线的对比训练。DeepscaleR-1.5B 的 Token 消耗降低 49.2%，准确率由 40.8% 提升至 44.3%。</p>
+              <p class="research-authors">作者：Hengcheng Du、Zhijing Yang、Lihong Chen、Hui Zhang。<a href="https://openreview.net/forum?id=45mdjGBZYA" target="_blank" rel="noreferrer">OpenReview 论文页 <i data-lucide="arrow-up-right"></i></a></p>
             </div>
-            <figure class="research-visual">
-              <img src="assets/ldp-overthinking.png" alt="过度思考与逻辑密度分布研究图">
-              <figcaption>Reasoning logic density distribution / Qwen3-8B</figcaption>
-            </figure>
+            <div class="media-carousel" data-media-carousel aria-label="Logic Density Pruning 图示">
+              <div class="media-slides"><figure class="media-slide is-active"><img src="assets/picture/image1.png" alt="Logic Density Pruning 方法流程图"><figcaption>Logic Density Pruning / 方法流程</figcaption></figure><figure class="media-slide"><img src="assets/ldp-overthinking.png" alt="过度思考与逻辑密度分布研究图"><figcaption>推理逻辑密度分布 / Qwen3-8B</figcaption></figure></div>
+              <div class="media-controls"><button type="button" class="icon-btn" data-media-previous aria-label="查看上一张研究图" title="上一张"><i data-lucide="arrow-left"></i></button><span data-media-page>1 / 2</span><button type="button" class="icon-btn" data-media-next aria-label="查看下一张研究图" title="下一张"><i data-lucide="arrow-right"></i></button></div>
+            </div>
           </article>
 
-          <article class="research-row reveal">
-            <div class="research-row-index">02</div>
-            <div>
-              <div class="meta-row"><span>2026.07</span><span>AAAI 2027 / IN SUBMISSION</span><span>SECOND AUTHOR</span></div>
-              <h3>Estimate, Then Think</h3>
-              <p class="research-subtitle">Prompt-Based Token Budgeting for Efficient Inference in Large Reasoning Models</p>
-              <p>针对大语言模型“想得更多却不一定答得更好”的预算失配，在 MATH500 等 2,022 道多难度问题上评估三个 LRM，提出 ETT 自适应提示预算策略：从成功轨迹构建“问题 - 提示预算”软标签，以 0.5 至 0.1 的缩减系数寻找预算下界；随后基于 Qwen3-8B 用 GRPO 训练仅输出整数预算的估计器，并以 Zero-shot / One-shot / Forced 三种提示接口完成预算选择与目标模型推理解耦。</p>
-              <p class="role-note"><span>MY ROLE</span> 负责训练集构建、基准标定、奖励函数设计、预算估计器训练和提示接口设计。</p>
+          <article class="research-feature research-feature--stacked research-feature--ett reveal">
+            <div class="research-feature-copy">
+              <div class="meta-row"><span>2026.07</span><span>AAAI 2027 / 审稿中</span><span>第二作者</span></div>
+              <h3 class="research-full-title">Estimate, Then Think: Prompt-Based Token Budgeting for Efficient Inference in Large Reasoning Models</h3>
+              <p>高效推理的关键是在维持推理质量的同时降低 token 消耗，但现有方法多依赖固定提示、人工预算、解码控制或额外训练，较少能同时适应具体问题难度和目标推理模型特性。本文提出 Estimate-Then-Think（ETT）：从目标模型的成功回答中学习，为每个问题预测一个推理预算引导值，并以软提示写入输入端，而非强制限制生成长度。</p>
+              <p>ETT 先构建预算标签，再通过组相对策略优化（GRPO）训练预算估计器，并通过零样本 ETT-Z 与单样本 ETT-O 将预算传递给不改动参数的目标模型。因此，目标模型无需额外训练成本。在三个大推理模型与四个数学推理基准上，ETT 对比四类高效推理方法取得整体最优结果：ETT-O 实现 33.02% 至 46.70% 的压缩率，同时将准确率提升 1.71 至 5.73 个百分点，Pass@3 提升 3.26 至 4.11 个百分点。</p>
+              <div class="metric-row ett-metric-row"><div><strong>46.70%</strong><span>最高推理 Token 压缩率</span></div><div><strong>+5.73 pp</strong><span>最高 Accuracy 提升</span></div><div><strong>+4.11 pp</strong><span>最高 Pass@3 提升</span></div></div>
+              <div class="ett-benchmark"><strong>ETT-O / 代表性结果</strong><span>90.27% Accuracy · 1,283.5 tokens · 相较基线节省 37.39%</span><span>覆盖 Qwen3-8B、GSM8K 与 MATH500 等模型和基准</span></div>
+              <p class="role-note"><span>我的贡献</span> 负责训练集构建、基准标定、奖励函数设计、预算估计器训练和提示接口设计。</p>
+              <p class="research-authors">作者：Zhijing Yang、Lihong Chen、Guohui Xiao、Hengcheng Du、Peng Liu、Lemei Zhang、Hui Zhang。<a href="https://openreview.net/forum?id=IhlzE18a26" target="_blank" rel="noreferrer">OpenReview 论文页 <i data-lucide="arrow-up-right"></i></a></p>
             </div>
-            <div class="research-result"><strong>46.70%</strong><span>Token 消耗降低</span><small>ETT-O：90.27% Acc · 1,283.5 tokens · 节省 37.39%<br>Qwen3-8B：Accuracy +5.73 pp · Pass@3 +4.11 pp<br>GSM8K 节省 43.09% · MATH500 +8.87 pp</small></div>
+            <div class="media-carousel" data-media-carousel aria-label="Estimate, Then Think 图示"><div class="media-slides"><figure class="media-slide is-active"><img src="assets/picture/image2.png" alt="Estimate, Then Think 方法流程图"><figcaption>Estimate, Then Think / 方法流程</figcaption></figure><figure class="media-slide"><img src="assets/picture/image3.png" alt="Estimate, Then Think 效果对比图"><figcaption>Estimate, Then Think / 推理效果对比</figcaption></figure></div><div class="media-controls"><button type="button" class="icon-btn" data-media-previous aria-label="查看上一张 ETT 研究图" title="上一张"><i data-lucide="arrow-left"></i></button><span data-media-page>1 / 2</span><button type="button" class="icon-btn" data-media-next aria-label="查看下一张 ETT 研究图" title="下一张"><i data-lucide="arrow-right"></i></button></div></div>
           </article>
 
-          <article class="research-row reveal">
+          <article class="research-row research-row--side-visual reveal">
             <div class="research-row-index">03</div>
             <div>
-              <div class="meta-row"><span>2025.09</span><span>社会经济导刊</span><span>SECOND AUTHOR</span></div>
+              <div class="meta-row"><span>2025</span><span>社会经济导刊</span><span>第二作者</span></div>
               <h3>生育支持政策下青年婚育观研究</h3>
               <p class="research-subtitle">从问卷数据到婚育意愿的结构模型与群体异质性</p>
-              <p>围绕家庭环境、婚育教育与婚育认知对青年婚育意愿的影响，设计多阶段分层抽样方案，完成问卷特征清洗、描述性可视化和核心实证模型构建；进一步使用结构方程模型完成路径估计与验证性因子分析，再以聚类算法划分三类特征群体，为异质性解释提供依据。</p>
-              <p class="role-note"><span>MY ROLE</span> 数据处理、核心实证模型构建、抽样方案设计、可视化分析与异质性聚类。</p>
+              <p>本研究聚焦成都市 18 至 35 岁青年群体的婚育状况，考察网络媒体、经济压力、家庭环境和婚育教育等因素共同作用下的婚育观变化与现实困境。研究采用问卷调查与深度访谈相结合的定量、定性方法，对青年婚育意愿、相关认知及其影响机制进行分析。</p>
+              <p>研究发现，当代青年婚育观呈现理性化、个性化与传统观念交织的特点：整体婚育意愿积极，但在经济压力与现实预期影响下更加审慎。基于结构方程模型、验证性因子分析和聚类方法，研究进一步识别出三类特征群体，为生育支持政策制定、青年发展与人口结构改善提供了参考。</p>
+              <p class="role-note"><span>我的贡献</span> 数据处理、核心实证模型构建、抽样方案设计、可视化分析与异质性聚类。</p>
+              <p class="research-citation">黄明秀、陈俐宏、汪正楠、钟一鸣，《生育支持政策下青年婚育观研究》，《社会经济导刊》，2025。作者单位：西南科技大学计算机科学与技术学院；西南科技大学环境与资源学院。关键词：青年婚育观、青年发展、差异性分析。DOI：10.64216/3080-1486.25.11.003。<a href="https://www.anmaichuban.com/journal/shjjdk/3915.html" target="_blank" rel="noreferrer">访问论文 <i data-lucide="arrow-up-right"></i></a></p>
             </div>
+            <figure class="research-inline-visual research-side-visual"><img src="assets/awards/Certificate/academic/papers/2025-youth-marriage-and-childbearing-acceptance-letter.jpg" alt="生育支持政策下青年婚育观研究用稿通知"><figcaption>《社会经济导刊》用稿通知 / 2025 年第 11 期</figcaption></figure>
             <div class="research-result"><strong>3 类</strong><span>青年特征群体</span><small>SEM · CFA · clustering</small></div>
+          </article>
+
+          <article class="research-row research-row--side-visual reveal">
+            <div class="research-row-index">04</div>
+            <div>
+              <div class="meta-row"><span>2026.06</span><span>AIDH 2026</span><span>已录用 · 第一作者</span></div>
+              <h3>面向非物质文化遗产的动态检索增强知识图谱抽取</h3>
+              <p class="research-subtitle">Token-Efficient Knowledge Graph Extraction for Intangible Cultural Heritage via Dynamic Retrieval Augmentation</p>
+              <p>论文聚焦非物质文化遗产场景中的知识图谱抽取，围绕领域资料中实体、关系与上下文信息分散的问题，引入动态检索增强机制，在保证抽取质量的同时提升 token 使用效率。论文已通过评审并获 2026 International Conference on Artificial Intelligence and Digital Humanity（AIDH 2026）录用，将在会议完成口头报告或海报展示后发表。</p>
+              <p class="research-authors">作者：Lihong Chen、Yiming Zhong、Meiqiong Liu。</p>
+            </div>
+            <div class="media-carousel research-side-visual" data-media-carousel aria-label="非遗知识图谱论文材料"><div class="media-slides"><figure class="media-slide is-active"><img src="assets/picture/知识图谱.png" alt="面向非物质文化遗产的动态检索增强知识图谱抽取示意图"><figcaption>动态检索增强知识图谱抽取 / 非物质文化遗产场景</figcaption></figure><figure class="media-slide"><img src="assets/awards/Certificate/academic/papers/2026-aidh-acceptance-letter.jpg" alt="AIDH 2026 论文录用通知"><figcaption>AIDH 2026 录用通知</figcaption></figure></div><div class="media-controls"><button type="button" class="icon-btn" data-media-previous aria-label="查看上一张论文材料" title="上一张"><i data-lucide="arrow-left"></i></button><span data-media-page>1 / 2</span><button type="button" class="icon-btn" data-media-next aria-label="查看下一张论文材料" title="下一张"><i data-lucide="arrow-right"></i></button></div></div>
+            <div class="research-result"><strong>已录用</strong><span>国际会议论文</span><small>人工智能与数字人文<br>第一作者</small></div>
+          </article>
+
+          <article class="research-row research-row--side-visual reveal">
+            <div class="research-row-index">05</div>
+            <div>
+              <div class="meta-row"><span>2026</span><span>授权外观设计专利</span><span>第二设计人</span></div>
+              <h3>两项授权外观设计专利</h3>
+              <p class="research-subtitle">专利权人：西南科技大学 / 设计人：黄明秀、陈俐宏</p>
+              <p>围绕文创产品设计，参与“挂件（缘缘）”与“手提袋”两项外观设计专利。两项专利均已获得授权，体现从创意方案到知识产权成果的完整转化。</p>
+            </div>
+            <div class="patent-carousel research-side-visual" data-patent-carousel aria-label="授权专利证书"><div class="patent-slides"><figure class="patent-slide is-active"><img src="assets/awards/Certificate/academic/patents/2026-pendant-yuanyuan-design-patent-certificate.jpg" alt="挂件缘缘外观设计专利证书"><figcaption><strong>挂件（缘缘）</strong><span>专利号 ZL 2025 3 0622764.3 · 2026 年 5 月 1 日授权</span></figcaption></figure><figure class="patent-slide"><img src="assets/awards/Certificate/academic/patents/2026-pendant-yuanyuan-design-patent-detail.jpg" alt="手提袋外观设计专利证书"><figcaption><strong>手提袋</strong><span>专利号 ZL 2025 3 0622777.0 · 2026 年 8 月 14 日授权</span></figcaption></figure></div><div class="patent-controls"><button type="button" class="icon-btn" data-patent-previous aria-label="查看上一项专利" title="上一项"><i data-lucide="arrow-left"></i></button><span data-patent-page>1 / 2</span><button type="button" class="icon-btn" data-patent-next aria-label="查看下一项专利" title="下一项"><i data-lucide="arrow-right"></i></button></div></div>
+            <div class="research-result"><strong>2 项</strong><span>授权外观设计专利</span><small>挂件（缘缘）<br>手提袋</small></div>
           </article>
 
           <div class="focus-line reveal">
@@ -134,22 +149,23 @@
       <section class="section section-tint" id="project" aria-labelledby="project-title">
         <div class="container">
           <div class="section-heading split-heading reveal">
-            <div><p class="section-kicker">03 / PROJECT</p><h2 id="project-title">把文化资料，变成可探索的知识。</h2></div>
-            <p>国创赛子项目 / 大学生科技创新基金项目 / 负责人<br>从文献到图谱，再到一个可以被看见的数字平台。</p>
+            <div><p class="section-kicker">02 / 项目经历</p><h2 id="project-title">藏纸非遗技艺数字化保护与活态传承系统</h2></div>
+            <p>大学生科技创新基金项目 / 负责人<br>面向藏纸与手工纸资料的采集、抽取、检索与交互展示。</p>
           </div>
           <article class="project-feature reveal">
-            <figure class="project-visual"><img src="assets/paper-platform.png" alt="藏纸非遗数字化平台界面截图"><figcaption>藏纸非遗数字化平台 / knowledge graph interface</figcaption></figure>
+            <figure class="project-visual"><img src="assets/ppt-media/image67.png" alt="藏纸文化数字化平台界面截图"><figcaption>藏纸文化数字化平台 / 资料展示界面</figcaption></figure>
             <div class="project-copy">
               <p class="project-label">纸承雪域</p>
-              <h3>藏纸非遗技艺数字化保护与活态传承</h3>
-              <p>用 Vue3、NestJS 与大模型微服务，建立文化展示、后台管理、知识图谱抽取和互动于一体的平台。非结构化文献被清洗、切分，再转成可交互的标准三元组。</p>
+              <h3>系统建设与内容扩展</h3>
+              <p>系统采用 Vue3、NestJS 与大模型微服务，集文化展示、后台管理、知识图谱抽取与互动功能于一体。项目起初围绕藏纸技艺开展资料采集、清洗、切分与三元组构建，现已扩展至手工纸相关的原料、工艺流程、器具、地域文化与文献资料，持续完善跨主题知识组织与检索能力。</p>
+              <div class="project-live-links"><span><i data-lucide="radio"></i> 系统已上线运行，当前持续开发中</span><div><a href="http://39.106.33.244:8082" target="_blank" rel="noreferrer">访问公众门户 <i data-lucide="arrow-up-right"></i></a><a href="http://39.106.33.244:8081" target="_blank" rel="noreferrer">进入管理后台 <i data-lucide="arrow-up-right"></i></a></div></div>
               <div class="project-points">
                 <div><span>01</span><p>定向采集藏纸网页语料，完成正文提取、噪声清洗与语义切分。</p></div>
                 <div><span>02</span><p>结合 BGE-m3 向量化与 FAISS 检索，召回 few-shot 样本辅助关系归一化。</p></div>
                 <div><span>03</span><p>参与前后端架构、数据库建模、后台管理和图谱页面联调。</p></div>
                 <div><span>04</span><p>平台已整理 23 种藏纸类型、12 项工艺流程和 2 种在售文创，系统已上线并持续开发。</p></div>
               </div>
-              <div class="tag-list"><span>Vue3</span><span>NestJS</span><span>LLM service</span><span>Knowledge graph</span><span>FAISS</span><a href="http://39.106.33.244:8082" target="_blank" rel="noreferrer">公众门户</a><a href="http://39.106.33.244:8081" target="_blank" rel="noreferrer">管理后台</a></div>
+              <div class="tag-list"><span>Vue3</span><span>NestJS</span><span>LLM service</span><span>Knowledge graph</span><span>FAISS</span></div>
             </div>
           </article>
         </div>
@@ -158,60 +174,110 @@
       <section class="section health-project" aria-labelledby="health-title">
         <div class="container">
           <div class="section-heading split-heading reveal">
-            <div><p class="section-kicker">04 / ENGINEERING PROJECT</p><h2 id="health-title">慢病智策：让体检数据更可解释。</h2></div>
-            <p>项目组长<br>从预测模型到决策路径，再到可交互的健康问答。</p>
+            <div><p class="section-kicker">03 / 工程项目</p><h2 id="health-title">慢病智能分析与决策支持系统</h2></div>
+            <p>项目组长<br>集成风险预测、决策解释、可视化与健康问答。</p>
           </div>
           <article class="health-feature reveal">
-            <div class="health-intro"><p>面向体检数据的慢性病智能分析平台，集多病种风险预测、决策路径解释、风险可视化和 AI 健康问答于一体。</p><div class="health-stats"><div><strong>4</strong><span>风险预测模型</span></div><div><strong>3</strong><span>聚类与解释视图</span></div><div><strong>1</strong><span>大模型问答入口</span></div></div></div>
-            <div class="health-points"><div><span>01</span><p>负责四种风险预测模型训练与优化，完成疾病数据特征处理和聚类分析。</p></div><div><span>02</span><p>接入遵循 OpenAI 协议的大模型问答接口，实现体检指标解释、风险解读和健康咨询。</p></div><div><span>03</span><p>技术栈涵盖 Flask-CORS、FastAPI、NumPy、Pandas、XGBoost、随机森林、K-means、PCA、t-SNE、Vue 3、Vite、ECharts、marked、dompurify 与原生 fetch API。</p></div></div>
+            <figure class="health-visual"><img src="assets/ppt-media/image20.png" alt="慢性病智能分析平台界面截图"><figcaption>慢性病智能分析平台 / 风险评估与决策路径</figcaption></figure>
+            <div class="health-content"><p class="health-intro">面向体检数据的慢性病智能分析平台，集多病种风险预测、决策路径解释、风险可视化和 AI 健康问答于一体。</p><div class="health-stats"><div><strong>4</strong><span>风险预测模型</span></div><div><strong>3</strong><span>聚类与解释视图</span></div><div><strong>1</strong><span>大模型问答入口</span></div></div><div class="health-points"><div><span>01</span><p>负责四种风险预测模型训练与优化，完成疾病数据特征处理和聚类分析。</p></div><div><span>02</span><p>接入遵循 OpenAI 协议的大模型问答接口，实现体检指标解释、风险解读和健康咨询。</p></div><div><span>03</span><p>技术栈涵盖 Flask-CORS、FastAPI、NumPy、Pandas、XGBoost、随机森林、K-means、PCA、t-SNE、Vue 3、Vite、ECharts、marked、dompurify 与原生 fetch API。</p></div></div></div>
           </article>
         </div>
       </section>
 
       <section class="section" id="highlights" aria-labelledby="highlights-title">
         <div class="container">
-          <div class="section-heading reveal"><p class="section-kicker">04 / HIGHLIGHTS</p><h2 id="highlights-title">在课堂之外，持续把事情做成。</h2></div>
+          <div class="section-heading reveal"><p class="section-kicker">04 / 荣誉奖项</p><h2 id="highlights-title">荣誉、竞赛与综合表现</h2></div>
           <div class="highlight-grid reveal">
-            <div class="highlight-stat"><strong>20+</strong><span>荣誉与表彰</span><p>2 次国家励志奖学金、11 次校院级奖学金、3.3w+ 奖助学金及四川省综合素质 A 证等。</p></div>
+            <div class="highlight-stat"><strong>30+</strong><span>荣誉与表彰</span><p>含 2 次国家励志奖学金、四川省大学生综合素质 A 级证书及校院级荣誉。</p></div>
             <div class="highlight-stat"><strong>10</strong><span>学生职务</span><p>学习委员、党支部支委、部长、班导生等，连接同学与团队。</p></div>
-            <div class="highlight-stat"><strong>1</strong><span>授权专利</span><p>以工程视角处理问题，也在真实场景里验证技术。</p></div>
+            <div class="highlight-stat"><strong>2</strong><span>授权专利</span><p>以工程视角处理问题，也在真实场景里验证技术。</p></div>
             <div class="highlight-stat"><strong>5</strong><span>社会实践</span><p>在社区、助残基地和校园活动中完成组织与服务。</p></div>
           </div>
           <div class="awards-list reveal">
-            <div class="award-item"><span class="award-year">2025</span><div><strong>全球校园人工智能大赛</strong><span>国家级二等奖 / 个人赛</span></div></div>
-            <div class="award-item"><span class="award-year">2025</span><div><strong>全国大学生统计建模大赛</strong><span>国家级三等奖 / 核心成员</span></div></div>
-            <div class="award-item"><span class="award-year">2026</span><div><strong>中国大学生计算机设计大赛</strong><span>省级一等奖 / 核心成员</span></div></div>
-            <div class="award-item"><span class="award-year">2026</span><div><strong>全国大学生市场调查与分析大赛</strong><span>省级二等奖 / 负责人</span></div></div>
-            <div class="award-item"><span class="award-year">2025</span><div><strong>CCF 算法能力大赛</strong><span>省级三等奖 / 个人赛</span></div></div>
-            <div class="award-item"><span class="award-year">2025</span><div><strong>睿抗机器人开发者大赛（RAICOM）</strong><span>省级三等奖 / 个人赛</span></div></div>
-            <div class="award-item"><span class="award-year">2024-26</span><div><strong>校院级竞赛与实践</strong><span>国家级 2 项、省级 8 项、校级 30 余项</span></div></div>
+            <div class="award-item"><span class="award-year">2023-24</span><div><strong>国家励志奖学金</strong><span>2023-2024 学年</span></div></div>
+            <div class="award-item"><span class="award-year">2024-25</span><div><strong>国家励志奖学金</strong><span>2024-2025 学年</span></div></div>
+            <div class="award-item"><span class="award-year">2024</span><div><strong>优秀共青团员</strong><span>校院级荣誉</span></div></div>
+            <div class="award-item"><span class="award-year">2024</span><div><strong>优秀学生干部</strong><span>校院级荣誉</span></div></div>
+            <div class="award-item"><span class="award-year">2024</span><div><strong>学生组织明星部长</strong><span>学生工作荣誉</span></div></div>
+            <div class="award-item"><span class="award-year">2024</span><div><strong>计算机科学与技术学院三好学生</strong><span>学院荣誉</span></div></div>
+            <div class="award-item"><span class="award-year">2024</span><div><strong>优秀志愿服务项目二等奖</strong><span>志愿服务项目</span></div></div>
+            <div class="award-item"><span class="award-year">2024</span><div><strong>第十二届全国大学生数字媒体科技作品及创意竞赛四川省赛区三等奖</strong><span>省级竞赛</span></div></div>
+            <div class="award-item"><span class="award-year">2024</span><div><strong>第一届中国计算机学会算法能力大赛四川省三等奖</strong><span>省级竞赛</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>四川省大学生综合素质 A 级证书</strong><span>省级综合素质认证</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>寒假社会实践活动三等奖</strong><span>社会实践奖项</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>第七届全球校园人工智能算法精英大赛全国总决赛二等奖</strong><span>国家级竞赛</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>第十六届蓝桥杯全国软件和信息技术专业人才大赛四川赛区二等奖</strong><span>省级竞赛</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>全国大学生统计建模大赛四川赛区一等奖</strong><span>省级竞赛</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>全国大学生统计建模大赛全国三等奖</strong><span>国家级竞赛</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>睿抗机器人开发者大赛四川省三等奖</strong><span>省级竞赛</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>攀拓认证等级奖三等奖</strong><span>竞赛奖项</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>iCAN 大学生创新创业大赛三等奖</strong><span>创新创业竞赛</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>十佳优秀志愿服务团队</strong><span>志愿服务荣誉</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>校级优秀团学干部</strong><span>学生工作荣誉</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>“书香之韵，易起来诵”比赛优秀奖</strong><span>校园文化活动</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>计算机科学与技术学院三好学生</strong><span>学院荣誉</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>西南科技大学优秀学生干部</strong><span>校级荣誉</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>优秀学生干部</strong><span>学生工作荣誉</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>西南科技大学道德风尚奖</strong><span>校级荣誉</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>社会实践先进个人</strong><span>社会实践荣誉</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>科技创新奖</strong><span>校级荣誉</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>艺术特长奖</strong><span>校级荣誉</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>暑期社会实践活动一等奖</strong><span>社会实践奖项</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>社会实践活动三等奖</strong><span>社会实践奖项</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>“母校行”社会实践活动三等奖</strong><span>社会实践奖项</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>资助宣传大使</strong><span>校园公益服务荣誉</span></div></div>
+            <div class="award-item"><span class="award-year">2025</span><div><strong>优秀视频奖</strong><span>校园活动荣誉</span></div></div>
+            <div class="award-item"><span class="award-year">2026</span><div><strong>第十九届中国大学生计算机设计大赛三等奖</strong><span>国家级竞赛</span></div></div>
+            <div class="award-item"><span class="award-year">2026</span><div><strong>第十九届中国大学生计算机设计大赛四川省赛区一等奖</strong><span>省级竞赛</span></div></div>
+            <div class="award-item"><span class="award-year">2026</span><div><strong>“正大杯”全国大学生市场调查与分析大赛四川省二等奖</strong><span>省级竞赛</span></div></div>
+            <div class="award-item"><span class="award-year">2026</span><div><strong>社会实践活动优胜奖</strong><span>社会实践奖项</span></div></div>
+          </div>
+          <div class="certificate-showcase reveal" id="certificates">
+            <div class="certificate-heading"><div><p class="section-kicker">证书档案</p><h3>荣誉表彰</h3></div><p>可左右滑动浏览，点击证书查看原件。</p></div>
+            <div class="certificate-carousel" data-certificate-carousel>
+              <button class="certificate-nav icon-btn" type="button" data-certificate-previous aria-label="查看上一组荣誉证书" title="上一组"><i data-lucide="arrow-left"></i></button>
+              <div class="certificate-scroller" data-certificate-gallery="honors" aria-label="荣誉表彰证书"></div>
+              <button class="certificate-nav icon-btn" type="button" data-certificate-next aria-label="查看下一组荣誉证书" title="下一组"><i data-lucide="arrow-right"></i></button>
+            </div>
+            <div class="certificate-heading certificate-heading-secondary"><div><p class="section-kicker">竞赛成果</p><h3>竞赛获奖</h3></div><p>含国家级、省级竞赛与项目成果。</p></div>
+            <div class="certificate-carousel" data-certificate-carousel>
+              <button class="certificate-nav icon-btn" type="button" data-certificate-previous aria-label="查看上一组竞赛证书" title="上一组"><i data-lucide="arrow-left"></i></button>
+              <div class="certificate-scroller" data-certificate-gallery="competitions" aria-label="竞赛获奖证书"></div>
+              <button class="certificate-nav icon-btn" type="button" data-certificate-next aria-label="查看下一组竞赛证书" title="下一组"><i data-lucide="arrow-right"></i></button>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="community-band" aria-labelledby="community-title">
         <div class="container community-grid reveal">
-          <div><p class="section-kicker">05 / PRACTICE</p><h2 id="community-title">把时间交给真实的人。</h2><p>曾任青志实践部外联组部长，连续组织“走进圣水，文明劝导”志愿活动；累计志愿服务 256 小时，影响人数 300+。参与校园公益、非遗守护、交通文明劝导、演讲比赛、毕业晚会独奏与团体合唱。</p></div>
-          <div class="practice-log"><div><span>2024 - 25</span><strong>圣水社区文明劝导</strong><small>团队组织 / 社区服务</small></div><div><span>256 h</span><strong>志愿服务累计</strong><small>50 余次活动 / 300+ 人触达</small></div><div><span>2024 - 25</span><strong>社会实践与美育</strong><small>暑假一等奖、寒假三等奖、“母校行”奖项、主唱团</small></div><div><span>2025.07</span><strong>资助宣传大使</strong><small>获媒体单独报道，荣获多项志愿奖项</small></div><div><span>习惯</span><strong>严谨记录，善于协作</strong><small>语雀沉淀近 50 万字实验记录，熟练使用 Git；抗压能力强</small></div></div>
+          <div><p class="section-kicker">05 / 社会实践</p><h2 id="community-title">学生工作与社会实践经历</h2><p>曾担任助理班主任、团支部书记、党支部支委、学习委员及学院党政办助理，参与新生适应支持、团日组织、学风建设和事务协调。持续参与助残基地志愿服务、非遗宣传、产品义卖及母校招生政策宣讲，累计志愿服务 256 小时，参与活动 50 余次。</p></div>
+          <div class="practice-log"><div><span>2024 - 26</span><strong>党支部支委</strong><small>协助党员发展、思想教育、组织生活会筹办与党费收缴</small></div><div><span>2024 - 26</span><strong>班级学习委员</strong><small>推进学风建设，对接教师与教学办，组织学习研讨和备考互助</small></div><div><span>2025 - 26</span><strong>学院党政办助理</strong><small>参与文件分发、数据统计、档案整理、会议筹备与接待工作</small></div><div><span>2024 - 25</span><strong>新生导生与外联组部长</strong><small>负责新生适应支持，并维护公益合作基地与志愿服务资源</small></div><div><span>2025.07</span><strong>资助宣传大使</strong><small>前往母校开展资助政策宣讲，促进经验交流与信息传递</small></div></div>
         </div>
       </section>
 
       <section class="section future-section" aria-labelledby="future-title">
         <div class="container">
-          <div class="section-heading reveal"><p class="section-kicker">06 / FUTURE PLAN</p><h2 id="future-title">面向软件安全的智能程序分析。</h2><p>围绕大语言模型增强的程序推理与安全分析，逐步完成课题与就业衔接，提升程序分析与安全攻防的研发和工程落地能力。</p></div>
-          <div class="future-grid reveal"><article><span>01 / 研一</span><h3>补齐理论，建立科研方法</h3><p>系统学习软件安全、机器学习与深度学习；阅读中英文文献，熟悉课题组方向和实验流程，完成基础实验与数据整理。</p></article><article><span>02 / 研二</span><h3>聚焦 LLM + 安全分析</h3><p>深入隐私检测、漏洞挖掘与代码溯源，推进论文实验、模型优化和项目协作，争取论文、专利或竞赛成果。</p></article><article><span>03 / 研三</span><h3>整合积累，完成就业衔接</h3><p>梳理论文主线与个人技术栈，完成毕业论文、项目复盘和成果整理，面向 AI 算法、计算机视觉或智能制造岗位。</p></article></div>
+          <div class="section-heading reveal"><p class="section-kicker">06 / 未来规划</p><h2 id="future-title">研究兴趣与发展规划</h2><p>希望在研究生阶段进一步夯实机器学习、深度学习、自然语言处理与知识表示基础，持续围绕高效推理、检索增强和知识图谱开展可复现、可解释的研究，并关注成果的实际应用价值。</p></div>
+          <div class="future-grid reveal"><article><span>01 / 研一</span><h3>夯实理论基础与研究方法</h3><p>系统学习机器学习、深度学习、自然语言处理和知识表示，建立文献阅读、实验设计与结果复核的规范流程。</p></article><article><span>02 / 研二</span><h3>聚焦高效推理与知识表示</h3><p>围绕 token 压缩、检索增强和知识图谱开展专题研究，推进实验迭代、论文写作与系统协作。</p></article><article><span>03 / 研三</span><h3>形成可复现的研究与工程能力</h3><p>梳理研究主线和技术积累，完成毕业论文、项目复盘与成果整理，推动研究方法在真实场景中的应用。</p></article></div>
         </div>
       </section>
 
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div class="container contact-grid reveal">
-          <div><p class="section-kicker">07 / CONTACT</p><h2 id="contact-title">一起把下一个问题做得更好。</h2><p>如果你正在关注高效推理、知识图谱或面向真实场景的 AI 系统，欢迎来信交流。</p></div>
+          <div><p class="section-kicker">07 / 联系方式</p><h2 id="contact-title">联系方式与学术交流</h2><p>如对大语言模型高效推理、知识图谱、自然语言处理或智能系统开发感兴趣，欢迎通过邮件联系交流。</p></div>
           <div class="contact-actions"><a class="contact-link" href="mailto:leechen@mails.swust.edu.cn"><span>leechen@mails.swust.edu.cn</span><i data-lucide="arrow-up-right"></i></a><a class="contact-link" href="tel:17883962853"><span>178-8396-2853</span><i data-lucide="phone"></i></a></div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer"><div class="container"><span>© <span data-year></span> LiHong Chen</span><span>Built with curiosity and care.</span><a href="#top" aria-label="回到顶部"><i data-lucide="arrow-up"></i></a></div></footer>
-    <script src="assets/script.js"></script>
+    <dialog class="certificate-modal" data-certificate-modal aria-label="证书查看器">
+      <button class="certificate-modal-close icon-btn" type="button" data-certificate-modal-close aria-label="关闭证书查看器" title="关闭"><i data-lucide="x"></i></button>
+      <div class="certificate-modal-content" data-certificate-modal-content></div>
+      <p data-certificate-modal-title></p>
+    </dialog>
+
+    <footer class="site-footer"><div class="container"><span>© <span data-year></span> 陈俐宏</span><span>持续学习，认真创造。</span><a href="#top" aria-label="回到顶部"><i data-lucide="arrow-up"></i></a></div></footer>
+    <script src="assets/script.js?v=certificate-previews-1"></script>
   </body>
 </html>
