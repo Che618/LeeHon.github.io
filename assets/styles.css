@@ -204,6 +204,9 @@ figcaption { margin-top: 9px; color: var(--ink-soft); font: 12px var(--mono); le
 .project-live-links a { display: inline-flex; align-items: center; gap: 5px; padding: 7px 10px; border: 1px solid var(--teal); color: var(--teal); font-size: 12px; font-weight: 700; transition: background .2s ease, color .2s ease; }
 .project-live-links a:hover { background: var(--teal); color: #fff; }
 .project-live-links a svg { width: 13px; height: 13px; }
+.project-media-column .project-live-links { margin: 26px 0 0; padding: 0; border: 0; text-align: center; }
+.project-media-column .project-live-links > span { justify-content: center; }
+.project-media-column .project-live-links > div { justify-content: center; }
 .project-points { margin-top: 27px; }
 .project-points > div { display: grid; grid-template-columns: 30px 1fr; gap: 13px; padding: 14px 0; border-top: 1px solid var(--line); }
 .project-points span { color: var(--coral); font: 500 11px var(--mono); }
