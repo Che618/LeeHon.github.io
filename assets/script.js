@@ -191,6 +191,8 @@
     const update = (nextPage) => {
       const total = pageCount();
       current = (nextPage + total) % total;
+      viewport.classList.remove('is-sliding');
+      window.requestAnimationFrame(() => viewport.classList.add('is-sliding'));
       viewport.scrollTo({ top: current * viewport.clientHeight, behavior: 'smooth' });
       if (page) page.textContent = `${current + 1} / ${total}`;
     };
@@ -211,6 +213,55 @@
   certificateModalClose?.addEventListener('click', () => certificateModal?.close());
   certificateModal?.addEventListener('click', (event) => {
     if (event.target === certificateModal) certificateModal.close();
+  });
+
+  const practicePhotoSources = [
+    '04a1938e506d19c4b92ca579ddf94653.jpg', '162446B8DB129DC6D4F37484D34CD88F.jpg',
+    '28FAC07E45D2DA22781EFE7BB1BB294B.jpg', '290C140E1C06F88623112D7D59E446B7.jpg',
+    '2AD32A6819681760B8122D19AF82A3D0.jpg', '3d08eaff18c640702bf313fc2bf64731_720.jpg',
+    '69853b07bfc57f8075b4998a5e58d16e_720.jpg', '6F65642A12F4C8B411299C1880609524.jpg',
+    '7ed1c973d0b6db54f22ad237b7ca4657.jpg', '91d3b0c60cb06473e42d6c179879fa67.jpg',
+    '9c2901acd37409e9f84efc4abbfb960d.jpg', '9C778AE7AF678B53159799AC3F4041E0.jpg',
+    'A17C55E578D1B9ADEEE1BB31FCFC95B9.jpg', 'AC9E0DB8FB86DFE2D109BA820A11D1BA.jpg',
+    'B7069E8E1149E261EA6C23B722EBB714.jpg', 'C61AA932E93612DE91E2C864FD0D3ABC.jpg',
+    'CB6AD4945F5B8318B544D034BEF43ED4.jpg', 'DD2B91C07D37272570F2D6BEC945ACE8.jpg',
+    'DD5726F6414DF6375982D910B931A549.jpg', 'E905041CAEB7CE9C0C58BB99ADDB6ED1.jpg',
+    'f342349e5a53aa3238e9db9746c868a6_720.jpg', 'F45E12A3D0D05F8F591E3F3F133A6849.jpg',
+    'FA50049FE853E4CE48538F1FCF805B81.jpg', 'fd0f600ce7b59d3b4b792429b6d7f06d_720.jpg',
+    'fd5aec0efb37b6c9e100e8858bcbf565_720.jpg'
+  ];
+  document.querySelectorAll('[data-practice-photo-carousel]').forEach((carousel) => {
+    const stage = carousel.querySelector('[data-practice-photo-stage]');
+    const page = carousel.querySelector('[data-practice-photo-page]');
+    if (!stage || !practicePhotoSources.length) return;
+    practicePhotoSources.forEach((source, index) => {
+      const figure = document.createElement('figure');
+      figure.className = `practice-photo-slide${index === 0 ? ' is-active' : ''}`;
+      const image = document.createElement('img');
+      image.src = encodeURI(`assets/play/${source}`);
+      image.alt = `学生工作与社会实践活动照片 ${index + 1}`;
+      image.loading = index === 0 ? 'eager' : 'lazy';
+      figure.append(image);
+      stage.append(figure);
+    });
+    const slides = Array.from(stage.children);
+    let current = 0;
+    let timer;
+    const update = (next) => {
+      current = (next + slides.length) % slides.length;
+      slides.forEach((slide, index) => slide.classList.toggle('is-active', index === current));
+      if (page) page.textContent = `${current + 1} / ${slides.length}`;
+    };
+    const restart = () => {
+      window.clearInterval(timer);
+      timer = window.setInterval(() => update(current + 1), 4800);
+    };
+    carousel.querySelector('[data-practice-photo-previous]')?.addEventListener('click', () => { update(current - 1); restart(); });
+    carousel.querySelector('[data-practice-photo-next]')?.addEventListener('click', () => { update(current + 1); restart(); });
+    carousel.addEventListener('mouseenter', () => window.clearInterval(timer));
+    carousel.addEventListener('mouseleave', restart);
+    update(0);
+    restart();
   });
 
   document.querySelectorAll('[data-media-carousel]').forEach((carousel) => {
