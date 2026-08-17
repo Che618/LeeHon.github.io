@@ -180,6 +180,34 @@
     carousel.querySelector('[data-certificate-next]')?.addEventListener('click', () => shift(1));
   });
 
+  document.querySelectorAll('[data-awards-carousel]').forEach((carousel) => {
+    const viewport = carousel;
+    const page = document.querySelector('[data-awards-page]');
+    const previous = document.querySelector('[data-awards-previous]');
+    const next = document.querySelector('[data-awards-next]');
+    let current = 0;
+    let timer;
+    const pageCount = () => Math.max(1, Math.ceil(viewport.scrollHeight / viewport.clientHeight));
+    const update = (nextPage) => {
+      const total = pageCount();
+      current = (nextPage + total) % total;
+      viewport.scrollTo({ top: current * viewport.clientHeight, behavior: 'smooth' });
+      if (page) page.textContent = `${current + 1} / ${total}`;
+    };
+    const restart = () => {
+      window.clearInterval(timer);
+      timer = window.setInterval(() => update(current + 1), 4600);
+    };
+    previous?.addEventListener('click', () => { update(current - 1); restart(); });
+    next?.addEventListener('click', () => { update(current + 1); restart(); });
+    viewport.addEventListener('mouseenter', () => window.clearInterval(timer));
+    viewport.addEventListener('mouseleave', restart);
+    viewport.addEventListener('focusin', () => window.clearInterval(timer));
+    viewport.addEventListener('focusout', restart);
+    update(0);
+    restart();
+  });
+
   certificateModalClose?.addEventListener('click', () => certificateModal?.close());
   certificateModal?.addEventListener('click', (event) => {
     if (event.target === certificateModal) certificateModal.close();
