@@ -193,6 +193,7 @@ figcaption { margin-top: 9px; color: var(--ink-soft); font: 12px var(--mono); le
 .project-feature { display: grid; grid-template-columns: 1.2fr .8fr; gap: 70px; align-items: start; }
 .project-visual { margin: 0; padding: 12px; background: var(--white); border: 1px solid var(--line); }
 .project-visual img { width: 100%; aspect-ratio: 1.75 / 1; object-fit: cover; object-position: center top; }
+.project-carousel .media-slide img { max-height: none; aspect-ratio: 2.1 / 1; object-fit: cover; object-position: center top; }
 .project-label { margin-bottom: 10px; color: var(--coral); }
 .project-copy h3 { max-width: 450px; }
 .project-copy > p:not(.project-label) { color: var(--ink-soft); font-size: 14px; }
@@ -408,9 +409,11 @@ figcaption { margin-top: 9px; color: var(--ink-soft); font: 12px var(--mono); le
 .hero-avatar img { width: 100%; height: 100%; object-fit: cover; }
 .hero-copy { min-width: 0; }
 .hero-role { margin: 0 0 5px; color: var(--teal); font-size: 13px; font-weight: 700; }
-.hero h1 { margin: 0; color: var(--ink); font-size: 42px; line-height: 1.15; letter-spacing: 0; }
-.hero-school { margin: 7px 0 10px; font-size: 19px; font-weight: 600; }
-.hero-lede { margin: 0; color: var(--ink-soft); font-size: 14px; line-height: 1.8; }
+.hero h1 { margin: 0; color: var(--ink); font-size: 36px; line-height: 1.15; letter-spacing: 0; }
+.hero-profile-meta { display: grid; gap: 8px; margin: 13px 0 0; }
+.hero-profile-meta > div { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 9px; align-items: start; }
+.hero-profile-meta dt { color: var(--teal); font-size: 14px; font-weight: 700; }
+.hero-profile-meta dd { margin: 0; color: var(--ink-soft); font-size: 16px; line-height: 1.55; }
 .hero-actions { align-items: center; margin-top: 19px; gap: 10px; }
 .hero-contact { display: inline-grid; place-items: center; width: 36px; height: 36px; border: 1px solid #9bb9c5; border-radius: 50%; color: var(--teal); transition: background .2s ease, color .2s ease; }
 .hero-contact:hover { background: var(--teal); color: #fff; }
@@ -444,30 +447,26 @@ figcaption { margin-top: 9px; color: var(--ink-soft); font: 12px var(--mono); le
   .hero { min-height: auto; padding: 46px 16px; }
   .hero-card { grid-template-columns: 1fr; gap: 22px; padding: 28px 24px; text-align: center; }
   .hero-avatar { margin: 0 auto; width: 150px; height: 150px; }
-  .hero h1 { font-size: 36px; }
-  .hero-school { font-size: 16px; }
+  .hero h1 { font-size: 32px; }
+  .hero-profile-meta { text-align: left; }
   .hero-actions { justify-content: center; }
   .intro-grid { grid-template-columns: 1fr; gap: 43px; }
 }
 
 /* Two-column academic profile header */
 .hero { min-height: 0; padding: 54px 0; }
-.hero-card { width: min(92vw, 1360px); grid-template-columns: minmax(260px, 330px) minmax(0, 1fr); gap: 48px; padding: 34px 40px; align-items: stretch; }
+.hero-card { width: min(88vw, 1480px); grid-template-columns: minmax(270px, 310px) minmax(0, 1fr); gap: 64px; padding: 38px 52px; align-items: stretch; }
 .hero-basic { display: flex; flex-direction: column; align-items: flex-start; padding-right: 40px; border-right: 1px solid #c7d8df; }
 .hero-basic .hero-avatar { width: 172px; height: 172px; margin-bottom: 22px; }
 .hero-basic .hero-copy { flex: 1; }
 .hero-basic .hero-actions { margin-top: 24px; }
-.hero-summary { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr); gap: 36px; align-items: start; }
-.hero-summary h2 { margin: 8px 0 13px; color: var(--ink); font-size: clamp(26px, 2.4vw, 34px); line-height: 1.2; font-weight: 700; }
-.hero-summary > div:first-child > p:not(.section-kicker) { margin: 0 0 12px; color: var(--ink-soft); font-size: 15px; line-height: 1.8; }
+.hero-summary { display: block; min-width: 0; }
+.hero-summary h2 { margin: 0 0 13px; color: var(--ink); font-size: clamp(26px, 2.4vw, 34px); line-height: 1.2; font-weight: 700; }
+.hero-summary > div:first-child > p:not(.section-kicker) { margin: 0 0 14px; color: var(--ink-soft); font-size: 17px; line-height: 1.82; }
 .hero-summary > div:first-child > p:last-child { margin-bottom: 0; }
-.hero-summary-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 18px; border-top: 1px solid #c7d8df; }
-.hero-summary-grid > div { padding: 15px 0 13px; border-bottom: 1px solid #c7d8df; }
-.hero-summary-grid strong { display: block; color: var(--teal); font-size: 20px; line-height: 1.15; }
-.hero-summary-grid span { display: block; margin-top: 6px; color: var(--ink-soft); font-size: 12px; line-height: 1.55; }
 
 @media (max-width: 900px) {
-  .hero-card { grid-template-columns: 250px minmax(0, 1fr); gap: 30px; padding: 30px; }
+  .hero-card { width: min(92vw, 1480px); grid-template-columns: 250px minmax(0, 1fr); gap: 34px; padding: 30px; }
   .hero-basic { padding-right: 30px; }
   .hero-summary { grid-template-columns: 1fr; gap: 24px; }
 }
@@ -478,7 +477,16 @@ figcaption { margin-top: 9px; color: var(--ink-soft); font: 12px var(--mono); le
   .hero-basic { padding: 0 0 25px; border-right: 0; border-bottom: 1px solid #c7d8df; }
   .hero-basic .hero-avatar { width: 138px; height: 138px; margin: 0 0 18px; }
   .hero-basic .hero-actions { justify-content: flex-start; }
-  .hero-summary { gap: 22px; }
-  .hero-summary-grid { grid-template-columns: 1fr 1fr; gap: 0 14px; }
   .hero-summary h2 { font-size: 25px; }
 }
+
+/* Keep supporting information readable at the academic body-text scale. */
+body { font-size: 17px; }
+.site-nav { font-size: 16px; }
+.hero-role, .hero-link, .section-kicker { font-size: 14px; }
+.hero-lede { font-size: 16px; }
+.section-heading > p:last-child, .about-main p, .community-heading > p:last-child, .health-intro { font-size: 17px; }
+.research-subtitle, .research-row p:not(.research-subtitle), .project-copy > p:not(.project-label), .community-band p:not(.section-kicker), .community-overview p { font-size: 16px; }
+.research-feature-copy > p:not(.research-subtitle):not(.role-note) { font-size: 17px; }
+.ett-benchmark, .ett-benchmark strong, .role-note, .project-points p, .health-points p, .highlight-stat span, .award-item strong, .certificate-heading > p, .certificate-card-media.is-unavailable, .certificate-card-copy strong, .certificate-modal > p, .practice-log strong, .future-grid p, .contact-section p:not(.section-kicker), .contact-link { font-size: 16px; }
+.eyebrow, .meta-row, .focus-line, .role-note span, .project-label, .portrait-note span, .award-year, .practice-log span, .metric-row span, .media-controls, figcaption, .research-citation, .research-authors, .patent-slide figcaption, .patent-controls, .research-result span, .research-result small, .project-live-links > span, .project-live-links a, .project-points span, .tag-list span, .tag-list a, .health-stats span, .health-points span, .highlight-stat p, .award-item div span, .certificate-card-type, .certificate-card-copy span, .practice-log small { font-size: 14px; }
