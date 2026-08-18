@@ -415,6 +415,10 @@ figcaption { margin-top: 9px; color: var(--ink-soft); font: 12px var(--mono); le
   .site-footer .container { align-items: flex-start; flex-wrap: wrap; }
 }
 
+@media (min-width: 681px) {
+  .community-grid { grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: 42px; }
+}
+
 /* Academic home layout */
 .site-header { background: #fff; color: var(--ink); border-bottom: 1px solid #d5e2e8; }
 .nav-wrap { min-height: 64px; justify-content: center; }
