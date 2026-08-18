@@ -270,7 +270,7 @@
     };
     const restart = () => {
       window.clearInterval(timer);
-      timer = window.setInterval(() => update(current + 1), 4800);
+      timer = window.setInterval(() => update(current + 1), 3200);
     };
     carousel.querySelector('[data-practice-photo-previous]')?.addEventListener('click', () => { update(current - 1); restart(); });
     carousel.querySelector('[data-practice-photo-next]')?.addEventListener('click', () => { update(current + 1); restart(); });
