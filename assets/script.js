@@ -265,7 +265,7 @@
       current = (next + slides.length) % slides.length;
       load(current);
       load((current + 1) % slides.length);
-      track.style.transform = `translateX(-${current * 100}%)`;
+      stage.scrollTo({ left: slides[current].offsetLeft - track.offsetLeft, behavior: 'smooth' });
       if (page) page.textContent = `${current + 1} / ${slides.length}`;
     };
     const restart = () => {
