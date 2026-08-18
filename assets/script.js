@@ -266,6 +266,31 @@
     restart();
   });
 
+  const practiceLog = document.querySelector('.practice-log');
+  if (practiceLog) {
+    const entries = Array.from(practiceLog.children);
+    const groups = [
+      ['具体任职经历', entries.slice(0, 9)],
+      ['具体实践经历', entries.slice(9)]
+    ];
+    practiceLog.replaceChildren();
+    groups.forEach(([title, items]) => {
+      const column = document.createElement('section');
+      column.className = 'practice-scroll-column';
+      const heading = document.createElement('h3');
+      heading.textContent = title;
+      const viewport = document.createElement('div');
+      viewport.className = 'practice-scroll-viewport';
+      const track = document.createElement('div');
+      track.className = 'practice-scroll-track';
+      items.forEach((item) => track.append(item));
+      items.forEach((item) => track.append(item.cloneNode(true)));
+      viewport.append(track);
+      column.append(heading, viewport);
+      practiceLog.append(column);
+    });
+  }
+
   document.querySelectorAll('[data-media-carousel]').forEach((carousel) => {
     const slides = Array.from(carousel.querySelectorAll('.media-slide'));
     const page = carousel.querySelector('[data-media-page]');
