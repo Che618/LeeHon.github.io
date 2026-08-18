@@ -306,7 +306,7 @@ figcaption { margin-top: 9px; color: var(--ink-soft); font: 12px var(--mono); le
 .community-overview p { margin: 0 0 15px; max-width: 520px; color: #e1f1f5; font-size: 14px; line-height: 1.8; }
 .practice-log { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(9, auto); grid-auto-flow: column; column-gap: 34px; padding-top: 38px; border-top: 1px solid rgba(255,255,255,.42); }
 .practice-log > div:nth-child(10) { position: relative; border-top: 2px solid rgba(255,255,255,.72); }
-.practice-log::before { content: "具体任职经历"; position: absolute; top: -34px; left: 0; color: #fff; font-size: 21px; font-weight: 700; }
+.practice-log::before { content: "任职与实践经历"; position: absolute; top: -34px; left: 0; color: #fff; font-size: 21px; font-weight: 700; }
 .practice-log > div:nth-child(10)::before { content: "社会实践经历"; position: absolute; top: -34px; left: 0; color: #fff; font-size: 21px; font-weight: 700; }
 .practice-log > div { display: grid; grid-template-columns: 80px 1fr; gap: 15px; padding: 17px 0; border-bottom: 1px solid rgba(255,255,255,.42); }
 .practice-log span { color: #c4e2ec; }
@@ -420,6 +420,19 @@ figcaption { margin-top: 9px; color: var(--ink-soft); font: 12px var(--mono); le
 
 @media (min-width: 681px) {
   .community-grid { grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: 42px; }
+}
+
+/* Keep the activity gallery on its own full row before the written experience. */
+.community-grid { display: block; }
+.community-grid .practice-photo-carousel { width: min(100%, 980px); margin: 0 0 48px; }
+.practice-log { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; grid-auto-flow: row; margin-top: 56px; padding-top: 17px; }
+.practice-log::before { top: -38px; }
+.practice-log > div:nth-child(10) { margin-top: 0; padding-top: 17px; }
+.practice-log > div:nth-child(10)::before { display: none; }
+
+@media (max-width: 680px) {
+  .community-grid .practice-photo-carousel { width: 100%; margin-bottom: 42px; }
+  .practice-log { grid-template-columns: 1fr; margin-top: 52px; }
 }
 
 /* Academic home layout */
