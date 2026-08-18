@@ -441,8 +441,8 @@ figcaption { margin-top: 9px; color: var(--ink-soft); font: 12px var(--mono); le
 .practice-log::before { display: none; }
 .practice-scroll-column { min-width: 0; }
 .practice-scroll-column h3 { margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,.55); color: #fff; font-size: 24px; line-height: 1.2; }
-.practice-scroll-viewport { height: 560px; overflow: hidden; border: 1px solid rgba(255,255,255,.42); }
-.practice-scroll-track { animation: practice-scroll 42s linear infinite; }
+.practice-scroll-viewport { height: 560px !important; overflow: hidden !important; border: 1px solid rgba(255,255,255,.42); }
+.practice-scroll-track { display: flex; flex-direction: column; animation: practice-scroll 42s linear infinite; will-change: transform; }
 .practice-scroll-column:nth-child(2) .practice-scroll-track { animation-duration: 24s; }
 .practice-scroll-viewport:hover .practice-scroll-track { animation-play-state: paused; }
 .practice-scroll-track > div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 10px 14px; min-height: 150px; padding: 20px 14px; border-bottom: 1px solid rgba(255,255,255,.38); }
@@ -452,7 +452,7 @@ figcaption { margin-top: 9px; color: var(--ink-soft); font: 12px var(--mono); le
 
 @media (max-width: 680px) {
   .practice-log { grid-template-columns: 1fr; gap: 30px; }
-  .practice-scroll-viewport { height: 430px; }
+  .practice-scroll-viewport { height: 430px !important; }
 }
 
 /* Academic home layout */
