@@ -424,7 +424,7 @@ figcaption { margin-top: 9px; color: var(--ink-soft); font: 12px var(--mono); le
 
 /* Keep the activity gallery on its own full row before the written experience. */
 .community-grid { display: block; }
-.community-grid .practice-photo-carousel { width: min(100%, 980px); margin: 0 0 48px; }
+.community-grid .practice-photo-carousel { width: min(100%, 980px); margin: 0 auto 48px; }
 .practice-log { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(9, auto); grid-auto-flow: column; margin-top: 56px; padding-top: 17px; }
 .practice-log::before { content: "具体任职经历"; top: -38px; }
 .practice-log > div:nth-child(10) { position: relative; margin-top: 0; padding-top: 38px; border-top: 0; }
