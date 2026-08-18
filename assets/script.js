@@ -131,8 +131,9 @@
         image.src = encodeURI(previewSource);
         image.alt = title;
         // Use compact previews in the carousel; the click action still opens the original file.
-        image.loading = 'eager';
+        image.loading = 'lazy';
         image.decoding = 'async';
+        image.fetchPriority = 'low';
         image.addEventListener('error', () => {
           if (!image.dataset.usedOriginal) {
             image.dataset.usedOriginal = 'true';
@@ -240,17 +241,26 @@
       const figure = document.createElement('figure');
       figure.className = `practice-photo-slide${index === 0 ? ' is-active' : ''}`;
       const image = document.createElement('img');
-      image.src = encodeURI(`assets/play/${source}`);
+      if (index === 0) image.src = encodeURI(`assets/play/${source}`);
+      else image.dataset.src = encodeURI(`assets/play/${source}`);
       image.alt = `学生工作与社会实践活动照片 ${index + 1}`;
       image.loading = index === 0 ? 'eager' : 'lazy';
+      image.decoding = 'async';
+      image.fetchPriority = index === 0 ? 'high' : 'low';
       figure.append(image);
       stage.append(figure);
     });
     const slides = Array.from(stage.children);
     let current = 0;
     let timer;
+    const load = (index) => {
+      const image = slides[index]?.querySelector('img');
+      if (image?.dataset.src) { image.src = image.dataset.src; delete image.dataset.src; }
+    };
     const update = (next) => {
       current = (next + slides.length) % slides.length;
+      load(current);
+      load((current + 1) % slides.length);
       slides.forEach((slide, index) => slide.classList.toggle('is-active', index === current));
       if (page) page.textContent = `${current + 1} / ${slides.length}`;
     };
