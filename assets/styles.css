@@ -559,7 +559,7 @@ body { font-size: 17px; }
 .eyebrow, .meta-row, .focus-line, .role-note span, .project-label, .portrait-note span, .award-year, .practice-log span, .metric-row span, .media-controls, figcaption, .research-citation, .research-authors, .patent-slide figcaption, .patent-controls, .research-result span, .research-result small, .project-live-links > span, .project-live-links a, .project-points span, .tag-list span, .tag-list a, .health-stats span, .health-points span, .highlight-stat p, .award-item div span, .certificate-card-type, .certificate-card-copy span, .practice-log small { font-size: 14px; }
 
 @media (min-width: 681px) {
-  .practice-log { display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; grid-auto-flow: column !important; gap: 24px !important; }
+  .practice-log { display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; grid-template-rows: none !important; grid-auto-flow: row !important; gap: 24px !important; }
   .practice-scroll-column { min-width: 0; }
 }
 
