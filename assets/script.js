@@ -237,9 +237,11 @@
     const stage = carousel.querySelector('[data-practice-photo-stage]');
     const page = carousel.querySelector('[data-practice-photo-page]');
     if (!stage || !practicePhotoSources.length) return;
+    const track = document.createElement('div');
+    track.className = 'practice-photo-track';
     practicePhotoSources.forEach((source, index) => {
       const figure = document.createElement('figure');
-      figure.className = `practice-photo-slide${index === 0 ? ' is-active' : ''}`;
+      figure.className = 'practice-photo-slide';
       const image = document.createElement('img');
       if (index === 0) image.src = encodeURI(`assets/play/${source}`);
       else image.dataset.src = encodeURI(`assets/play/${source}`);
@@ -248,9 +250,11 @@
       image.decoding = 'async';
       image.fetchPriority = index === 0 ? 'high' : 'low';
       figure.append(image);
-      stage.append(figure);
+      figure.addEventListener('click', () => showCertificate(`学生工作与社会实践活动照片 ${index + 1}`, `assets/play/${source}`));
+      track.append(figure);
     });
-    const slides = Array.from(stage.children);
+    stage.append(track);
+    const slides = Array.from(track.children);
     let current = 0;
     let timer;
     const load = (index) => {
@@ -261,7 +265,7 @@
       current = (next + slides.length) % slides.length;
       load(current);
       load((current + 1) % slides.length);
-      slides.forEach((slide, index) => slide.classList.toggle('is-active', index === current));
+      track.style.transform = `translateX(-${current * 100}%)`;
       if (page) page.textContent = `${current + 1} / ${slides.length}`;
     };
     const restart = () => {
