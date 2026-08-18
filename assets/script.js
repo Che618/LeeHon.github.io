@@ -265,6 +265,8 @@
       current = (next + slides.length) % slides.length;
       load(current);
       load((current + 1) % slides.length);
+      load((current + 2) % slides.length);
+      load((current + 3) % slides.length);
       stage.scrollTo({ left: slides[current].offsetLeft - track.offsetLeft, behavior: 'smooth' });
       if (page) page.textContent = `${current + 1} / ${slides.length}`;
     };
